@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>amin's 티키타카 테스트</title>
+  <title>아민스 잉글리시</title>
   <style>
     :root {
       --bg: #eef7ff;
@@ -22,9 +22,7 @@
       --radius: 22px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -36,14 +34,8 @@
       min-height: 100vh;
     }
 
-    button,
-    input {
-      font-family: inherit;
-    }
-
-    button {
-      -webkit-tap-highlight-color: transparent;
-    }
+    button, input { font-family: inherit; }
+    button { -webkit-tap-highlight-color: transparent; }
 
     .app {
       width: 100%;
@@ -55,14 +47,8 @@
       overflow-x: hidden;
     }
 
-    .screen {
-      min-height: 100vh;
-      padding: 18px;
-    }
-
-    .hidden {
-      display: none !important;
-    }
+    .screen { min-height: 100vh; padding: 18px; }
+    .hidden { display: none !important; }
 
     /* Start */
     .start-screen {
@@ -82,22 +68,20 @@
 
     .eyebrow {
       color: var(--blue-dark);
-      font-size: 13px;
-      font-weight: 900;
-      letter-spacing: -0.01em;
+      font-size: 17px;
+      font-weight: 1000;
+      letter-spacing: -0.02em;
       margin-bottom: 8px;
     }
 
     .brand-title {
       margin: 0;
-      font-size: 30px;
+      font-size: 34px;
       line-height: 1.05;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.055em;
     }
 
-    .brand-title span {
-      color: var(--blue-dark);
-    }
+    .brand-title span { color: var(--blue-dark); }
 
     .brand-desc {
       margin: 12px 0 0;
@@ -128,21 +112,9 @@
       flex: 0 0 auto;
     }
 
-    .avatar.other {
-      background: #e0f2fe;
-      color: #0369a1;
-    }
-
-    .avatar.me {
-      background: #dcfce7;
-      color: #15803d;
-    }
-
-    .avatar.small {
-      width: 42px;
-      height: 42px;
-      font-size: 12px;
-    }
+    .avatar.other { background: #e0f2fe; color: #0369a1; }
+    .avatar.me { background: #dcfce7; color: #15803d; }
+    .avatar.small { width: 42px; height: 42px; font-size: 12px; }
 
     .preview-line {
       height: 4px;
@@ -151,17 +123,8 @@
       background: linear-gradient(90deg, #bae6fd, #bbf7d0);
     }
 
-    .name-box {
-      margin-top: 16px;
-      display: grid;
-      gap: 8px;
-    }
-
-    .name-box label {
-      font-size: 13px;
-      font-weight: 900;
-      color: #334155;
-    }
+    .name-box { margin-top: 16px; display: grid; gap: 8px; }
+    .name-box label { font-size: 13px; font-weight: 900; color: #334155; }
 
     .name-input {
       width: 100%;
@@ -179,10 +142,7 @@
       box-shadow: 0 0 0 4px rgba(28, 176, 246, 0.14);
     }
 
-    .chapter-grid {
-      display: grid;
-      gap: 10px;
-    }
+    .chapter-grid { display: grid; gap: 10px; }
 
     .chapter-card {
       width: 100%;
@@ -196,23 +156,9 @@
       cursor: pointer;
     }
 
-    .chapter-card:active {
-      transform: scale(0.99);
-    }
-
-    .chapter-card strong {
-      display: block;
-      font-size: 18px;
-      letter-spacing: -0.03em;
-    }
-
-    .chapter-card span {
-      display: block;
-      margin-top: 5px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 800;
-    }
+    .chapter-card:active { transform: scale(0.99); }
+    .chapter-card strong { display: block; font-size: 18px; letter-spacing: -0.03em; }
+    .chapter-card span { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; font-weight: 800; }
 
     .chapter-card.main {
       background: linear-gradient(135deg, #1cb0f6, #0ea5e9);
@@ -220,9 +166,7 @@
       border: none;
     }
 
-    .chapter-card.main span {
-      color: rgba(255, 255, 255, 0.88);
-    }
+    .chapter-card.main span { color: rgba(255, 255, 255, 0.88); }
 
     .coming-box {
       background: rgba(255,255,255,0.75);
@@ -231,19 +175,8 @@
       padding: 12px;
     }
 
-    .coming-title {
-      font-size: 12px;
-      color: #64748b;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .coming-list {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 2px;
-    }
+    .coming-title { font-size: 12px; color: #64748b; font-weight: 900; margin-bottom: 8px; }
+    .coming-list { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
 
     .coming-chip {
       white-space: nowrap;
@@ -255,11 +188,75 @@
       font-weight: 900;
     }
 
-    /* Quiz */
-    .quiz-screen {
-      padding: 0;
-      background: #f8fbff;
+    /* Loading */
+    .loading-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top, rgba(28, 176, 246, 0.2), transparent 36%),
+        #f8fbff;
     }
+
+    .loading-card {
+      width: 100%;
+      background: white;
+      border-radius: 30px;
+      padding: 30px 22px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 1px solid #e0f2fe;
+    }
+
+    .shuffle-icon {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 14px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: #e0f2fe;
+      font-size: 36px;
+      animation: shuffleSpin 1.1s infinite ease-in-out;
+    }
+
+    .loading-card h2 { margin: 0; font-size: 25px; letter-spacing: -0.045em; }
+    .loading-card p { margin: 9px 0 0; color: #64748b; font-size: 14px; font-weight: 800; }
+
+    .shuffle-words {
+      margin-top: 20px;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .shuffle-words span {
+      padding: 9px 11px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #075985;
+      font-size: 12px;
+      font-weight: 1000;
+      animation: wordBounce 0.9s infinite alternate;
+    }
+
+    .shuffle-words span:nth-child(2) { animation-delay: 0.15s; }
+    .shuffle-words span:nth-child(3) { animation-delay: 0.3s; }
+
+    @keyframes shuffleSpin {
+      0% { transform: rotate(-8deg) scale(1); }
+      50% { transform: rotate(8deg) scale(1.08); }
+      100% { transform: rotate(-8deg) scale(1); }
+    }
+
+    @keyframes wordBounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-7px); }
+    }
+
+    /* Quiz */
+    .quiz-screen { padding: 0; background: #f8fbff; }
 
     .topbar {
       position: sticky;
@@ -287,9 +284,7 @@
       cursor: pointer;
     }
 
-    .progress-area {
-      min-width: 0;
-    }
+    .progress-area { min-width: 0; }
 
     .progress-track {
       height: 10px;
@@ -345,9 +340,7 @@
       animation: flameGlow 0.75s infinite alternate;
     }
 
-    .combo-pop {
-      animation: comboPop 0.38s ease;
-    }
+    .combo-pop { animation: comboPop 0.38s ease; }
 
     @keyframes comboPop {
       0% { transform: scale(1); }
@@ -360,9 +353,7 @@
       to { box-shadow: 0 0 19px rgba(249, 115, 22, 0.42); }
     }
 
-    .quiz-main {
-      padding: 12px 14px 112px;
-    }
+    .quiz-main { padding: 12px 14px 112px; }
 
     .compact-head {
       display: flex;
@@ -453,20 +444,10 @@
       line-height: 1.35;
     }
 
-    .dialogue {
-      display: grid;
-      gap: 8px;
-    }
+    .dialogue { display: grid; gap: 8px; }
 
-    .talk-row {
-      display: flex;
-      gap: 8px;
-      align-items: flex-end;
-    }
-
-    .talk-row.me-row {
-      flex-direction: row-reverse;
-    }
+    .talk-row { display: flex; gap: 8px; align-items: flex-end; }
+    .talk-row.me-row { flex-direction: row-reverse; }
 
     .bubble {
       max-width: calc(100% - 54px);
@@ -477,32 +458,12 @@
       box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
     }
 
-    .me-row .bubble {
-      background: #ecfdf5;
-      border-color: #bbf7d0;
-    }
+    .me-row .bubble { background: #ecfdf5; border-color: #bbf7d0; }
 
-    .bubble-label {
-      font-size: 11px;
-      font-weight: 1000;
-      color: #64748b;
-      margin-bottom: 4px;
-    }
+    .bubble-label { font-size: 11px; font-weight: 1000; color: #64748b; margin-bottom: 4px; }
 
-    .opener-text {
-      font-size: 15px;
-      line-height: 1.35;
-      font-weight: 900;
-      color: #1e293b;
-    }
-
-    .opener-ko {
-      margin-top: 3px;
-      font-size: 12px;
-      line-height: 1.35;
-      color: #64748b;
-      font-weight: 800;
-    }
+    .opener-text { font-size: 15px; line-height: 1.35; font-weight: 900; color: #1e293b; }
+    .opener-ko { margin-top: 3px; font-size: 12px; line-height: 1.35; color: #64748b; font-weight: 800; }
 
     .sentence {
       font-size: 19px;
@@ -552,10 +513,7 @@
       font-weight: 1000;
     }
 
-    .meaning-action {
-      color: #b45309;
-      font-size: 11px;
-    }
+    .meaning-action { color: #b45309; font-size: 11px; }
 
     .meaning-text {
       margin: 6px 0 0;
@@ -565,10 +523,7 @@
       font-weight: 900;
     }
 
-    .meaning-card.collapsed {
-      background: #fff7ed;
-      padding: 9px 12px;
-    }
+    .meaning-card.collapsed { background: #fff7ed; padding: 9px 12px; }
 
     .hint-box {
       margin-top: 8px;
@@ -578,8 +533,15 @@
       border-radius: 16px;
       padding: 10px 12px;
       font-size: 13px;
-      line-height: 1.45;
+      line-height: 1.5;
       font-weight: 850;
+    }
+
+    .hint-box .gloss-line {
+      font-size: 14px;
+      color: #0c4a6e;
+      font-weight: 1000;
+      letter-spacing: -0.01em;
     }
 
     .selected-area {
@@ -614,23 +576,10 @@
       box-shadow: 0 4px 0 rgba(15, 23, 42, 0.11);
     }
 
-    .selected-token {
-      background: #dcfce7;
-      color: #166534;
-    }
+    .selected-token { background: #dcfce7; color: #166534; }
 
-    .word-bank {
-      margin-top: 11px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .word-token {
-      background: #ffffff;
-      color: #0f172a;
-      border: 1px solid #e2e8f0;
-    }
+    .word-bank { margin-top: 11px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .word-token { background: #ffffff; color: #0f172a; border: 1px solid #e2e8f0; }
 
     .word-token:active,
     .selected-token:active {
@@ -638,9 +587,7 @@
       box-shadow: 0 2px 0 rgba(15, 23, 42, 0.12);
     }
 
-    .shake {
-      animation: shake 0.26s ease;
-    }
+    .shake { animation: shake 0.26s ease; }
 
     @keyframes shake {
       0%, 100% { transform: translateX(0); }
@@ -656,7 +603,7 @@
       max-width: 500px;
       transform: translateX(-50%);
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1.45fr;
+      grid-template-columns: 1.15fr 1fr 1.35fr;
       gap: 8px;
       padding: 10px 14px 14px;
       background: rgba(248, 251, 255, 0.94);
@@ -682,11 +629,7 @@
       box-shadow: 0 5px 0 var(--green-dark);
     }
 
-    .bar-btn.primary:disabled {
-      opacity: 0.45;
-      box-shadow: none;
-      cursor: not-allowed;
-    }
+    .bar-btn.primary:disabled { opacity: 0.45; box-shadow: none; cursor: not-allowed; }
 
     .feedback-panel {
       position: fixed;
@@ -702,15 +645,9 @@
       border: 1px solid rgba(255,255,255,0.7);
     }
 
-    .feedback-panel.correct {
-      background: #ecfdf5;
-      border-color: #bbf7d0;
-    }
-
-    .feedback-panel.wrong {
-      background: #fff1f2;
-      border-color: #fecdd3;
-    }
+    .feedback-panel.correct { background: #ecfdf5; border-color: #bbf7d0; }
+    .feedback-panel.works { background: #f0f9ff; border-color: #bae6fd; }
+    .feedback-panel.wrong { background: #fff1f2; border-color: #fecdd3; }
 
     .feedback-kicker {
       display: inline-flex;
@@ -723,22 +660,11 @@
       margin-bottom: 8px;
     }
 
-    .correct .feedback-kicker {
-      background: #dcfce7;
-      color: #15803d;
-    }
+    .correct .feedback-kicker { background: #dcfce7; color: #15803d; }
+    .works .feedback-kicker { background: #e0f2fe; color: #0369a1; }
+    .wrong .feedback-kicker { background: #ffe4e6; color: #be123c; }
 
-    .wrong .feedback-kicker {
-      background: #ffe4e6;
-      color: #be123c;
-    }
-
-    .feedback-title {
-      margin: 0;
-      font-size: 20px;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-    }
+    .feedback-title { margin: 0; font-size: 20px; line-height: 1.15; letter-spacing: -0.04em; }
 
     .feedback-body,
     .feedback-example,
@@ -750,21 +676,10 @@
       color: #334155;
     }
 
-    .feedback-example {
-      background: rgba(255,255,255,0.68);
-      border-radius: 16px;
-      padding: 10px 11px;
-    }
+    .feedback-example { background: rgba(255,255,255,0.68); border-radius: 16px; padding: 10px 11px; }
+    .feedback-tip { color: #475569; }
 
-    .feedback-tip {
-      color: #475569;
-    }
-
-    .feedback-actions {
-      display: flex;
-      gap: 8px;
-      margin-top: 12px;
-    }
+    .feedback-actions { display: flex; gap: 8px; margin-top: 12px; }
 
     .feedback-btn {
       flex: 1;
@@ -776,23 +691,11 @@
       cursor: pointer;
     }
 
-    .feedback-btn.retry {
-      background: white;
-      color: #be123c;
-    }
-
-    .feedback-btn.next {
-      background: var(--green);
-      color: white;
-    }
+    .feedback-btn.retry { background: white; color: #be123c; }
+    .feedback-btn.next { background: var(--green); color: white; }
 
     /* Result */
-    .result-screen {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 14px;
-    }
+    .result-screen { display: flex; flex-direction: column; justify-content: center; gap: 14px; }
 
     .result-card {
       background: white;
@@ -802,59 +705,17 @@
       border: 1px solid #e0f2fe;
     }
 
-    .result-emoji {
-      font-size: 48px;
-      margin-bottom: 6px;
-    }
+    .result-emoji { font-size: 48px; margin-bottom: 6px; }
+    .result-title { margin: 0; font-size: 28px; letter-spacing: -0.05em; }
+    .result-summary { margin: 8px 0 0; color: #64748b; font-size: 14px; font-weight: 800; line-height: 1.45; }
 
-    .result-title {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: -0.05em;
-    }
+    .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; margin-top: 16px; }
 
-    .result-summary {
-      margin: 8px 0 0;
-      color: #64748b;
-      font-size: 14px;
-      font-weight: 800;
-      line-height: 1.45;
-    }
+    .stat { border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 13px; }
+    .stat small { display: block; color: #64748b; font-size: 12px; font-weight: 900; }
+    .stat strong { display: block; margin-top: 3px; font-size: 22px; font-weight: 1000; color: #0f172a; }
 
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 9px;
-      margin-top: 16px;
-    }
-
-    .stat {
-      border-radius: 20px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      padding: 13px;
-    }
-
-    .stat small {
-      display: block;
-      color: #64748b;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .stat strong {
-      display: block;
-      margin-top: 3px;
-      font-size: 22px;
-      font-weight: 1000;
-      color: #0f172a;
-    }
-
-    .wrong-review {
-      margin-top: 15px;
-      display: grid;
-      gap: 8px;
-    }
+    .wrong-review { margin-top: 15px; display: grid; gap: 8px; }
 
     .wrong-item {
       background: #fff7ed;
@@ -867,29 +728,11 @@
       color: #7c2d12;
     }
 
-    .result-actions {
-      display: grid;
-      gap: 9px;
-    }
+    .result-actions { display: grid; gap: 9px; }
 
-    .big-btn {
-      border: 0;
-      border-radius: 20px;
-      padding: 15px 16px;
-      font-size: 16px;
-      font-weight: 1000;
-      cursor: pointer;
-    }
-
-    .big-btn.primary {
-      background: var(--blue);
-      color: white;
-    }
-
-    .big-btn.secondary {
-      background: #e2e8f0;
-      color: #334155;
-    }
+    .big-btn { border: 0; border-radius: 20px; padding: 15px 16px; font-size: 16px; font-weight: 1000; cursor: pointer; }
+    .big-btn.primary { background: var(--blue); color: white; }
+    .big-btn.secondary { background: #e2e8f0; color: #334155; }
 
     /* Zoom */
     .zoom-overlay {
@@ -927,23 +770,10 @@
     }
 
     @media (max-height: 720px) {
-      .photo-card img {
-        height: 108px;
-      }
-
-      .sentence {
-        font-size: 18px;
-      }
-
-      .quiz-main {
-        padding-bottom: 104px;
-      }
-
-      .selected-token,
-      .word-token {
-        padding: 9px 10px;
-        font-size: 15px;
-      }
+      .photo-card img { height: 108px; }
+      .sentence { font-size: 18px; }
+      .quiz-main { padding-bottom: 104px; }
+      .selected-token, .word-token { padding: 9px 10px; font-size: 15px; }
     }
   </style>
 </head>
@@ -954,10 +784,10 @@
     <section id="startScreen" class="screen start-screen">
       <div class="brand-card">
         <div class="eyebrow">amin's</div>
-        <h1 class="brand-title">티키타카<br><span>테스트</span></h1>
+        <h1 class="brand-title">아민스<br><span>잉글리시</span></h1>
         <p class="brand-desc">
           사진을 보고, 단어 블록을 눌러 영어 문장을 완성해요.<br>
-          로그인 없이 이번 회차 정확도만 확인합니다.
+          뜻만 통하면 정답! 완벽하지 않아도 괜찮아요.
         </p>
 
         <div class="avatar-preview" aria-label="대화 미리보기">
@@ -968,7 +798,7 @@
 
         <div class="name-box">
           <label for="learnerNameInput">내 이름</label>
-          <input id="learnerNameInput" class="name-input" maxlength="8" placeholder="예: 종철" />
+          <input id="learnerNameInput" class="name-input" maxlength="8" placeholder="예: 승민" />
         </div>
       </div>
 
@@ -1004,6 +834,21 @@
           <span class="coming-chip">31~33 준비 중</span>
           <span class="coming-chip">34~36 준비 중</span>
           <span class="coming-chip">44~46 준비 중</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOADING -->
+    <section id="loadingScreen" class="screen loading-screen hidden">
+      <div class="loading-card">
+        <div class="shuffle-icon">🔀</div>
+        <h2 id="loadingTitle">지금 섞고 있습니다</h2>
+        <p id="loadingSub">문장과 사진을 랜덤으로 섞는 중이에요.</p>
+
+        <div class="shuffle-words">
+          <span>What did you</span>
+          <span>Can I have</span>
+          <span>Have you</span>
         </div>
       </div>
     </section>
@@ -1077,8 +922,7 @@
       </main>
 
       <footer class="action-bar">
-        <button id="undoBtn" class="bar-btn" type="button">취소</button>
-        <button id="clearBtn" class="bar-btn" type="button">지우기</button>
+        <button id="clearBtn" class="bar-btn" type="button">전체 지우기</button>
         <button id="hintBtn" class="bar-btn" type="button">힌트</button>
         <button id="checkBtn" class="bar-btn primary" type="button" disabled>확인</button>
       </footer>
@@ -1126,7 +970,8 @@
       </div>
 
       <div class="result-actions">
-        <button id="retrySameBtn" class="big-btn primary" type="button">같은 코스 다시 하기</button>
+        <button id="reviewBtn" class="big-btn primary hidden" type="button">틀린 문제 복습하기</button>
+        <button id="retrySameBtn" class="big-btn secondary" type="button">같은 코스 다시 하기</button>
         <button id="homeBtn" class="big-btn secondary" type="button">처음으로</button>
       </div>
     </section>
@@ -1178,6 +1023,31 @@
         "30": "30과"
       };
 
+      /* ===== 너그러운 채점용 어휘 데이터 =====
+         - 관사(a/an/the)는 빠져도 정답으로 인정
+         - 동사 형태(watch/watched/watching 등)는 같은 동사로 보고 정답 인정
+         즉 왕초보가 뜻만 통하게 만들면 거의 다 정답이 됩니다. */
+      const ARTICLES = new Set(["a", "an", "the"]);
+      const LEMMA = {
+        watched: "watch", watching: "watch", watch: "watch",
+        saw: "see", seen: "see", see: "see",
+        went: "go", gone: "go", go: "go",
+        got: "get", gotten: "get", get: "get",
+        bought: "buy", buy: "buy",
+        ate: "eat", eaten: "eat", eat: "eat",
+        had: "have", has: "have", have: "have",
+        met: "meet", meet: "meet",
+        tried: "try", trying: "try", try: "try",
+        did: "do", does: "do", done: "do", do: "do",
+        finished: "finish", finishing: "finish", finish: "finish",
+        checked: "check", checking: "check", check: "check",
+        looked: "look", looking: "look", look: "look",
+        brought: "bring", bringing: "bring", bring: "bring",
+        visited: "visit", visit: "visit",
+        traveled: "travel", travelled: "travel", travel: "travel",
+        been: "be", is: "be", are: "be", was: "be", were: "be", am: "be", be: "be"
+      };
+
       const SITUATIONS = [
         {
           id: "28-01",
@@ -1186,50 +1056,26 @@
           pattern: "What did you ~?",
           patternKo: "무엇을 했는지 묻기",
           alt: "친구와 영화 이야기를 하는 상황",
-          opener: {
-            text: "I watched a movie last night.",
-            ko: "나 어젯밤에 영화 봤어."
-          },
+          opener: { text: "I watched a movie last night.", ko: "나 어젯밤에 영화 봤어." },
           turns: [
             {
               role: "me",
               ko: "오, 뭐 봤어?",
               prefix: "Oh, what did you",
               suffix: "?",
+              orderGloss: "오(Oh) + 무엇을(what) + 너는 했니(did you) + 보다(watch)",
               variants: [
-                {
-                  words: ["watch"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "What did you watch? 는 영화나 영상을 두고 '뭐 봤어?'라고 물을 때 가장 자연스러워요."
-                },
-                {
-                  words: ["see"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "What did you see? 도 영화/공연 맥락에서는 가능해요. 다만 영상물을 직접 본 느낌은 watch가 더 또렷합니다."
-                }
+                { words: ["watch"], quality: "best", note: "What did you watch? 는 영화·영상을 두고 '뭐 봤어?'라고 물을 때 가장 자연스러워요." },
+                { words: ["see"], quality: "possible", note: "What did you see? 도 영화·공연 맥락에서 가능해요." }
               ],
               fillers: ["watched", "saw", "movie", "do", "look"],
-              hint: "did가 이미 과거를 표현해요. 그래서 뒤에는 과거형이 아니라 동사원형이 와요.",
+              hint: "did가 이미 과거예요. watch든 watched든 뜻은 통하고, 더 깔끔한 건 동사원형 watch예요.",
               pronunciation: "[오, 왓 디쥬 와치?]",
-              tip: "기억법: did 뒤에는 동사원형. What did you watched? 는 쓰지 않아요.",
+              tip: "What did you watch? 가 가장 깔끔해요.",
               trapFeedback: {
-                watched: {
-                  title: "watched가 아니라 watch예요.",
-                  body: "What did you ____ ? 에서는 did가 이미 과거를 담당해요. 그래서 뒤에는 과거형 watched가 아니라 동사원형 watch를 써야 해요.",
-                  exampleWrong: "What did you watched? ❌",
-                  exampleCorrect: "What did you watch? ✅"
-                },
-                saw: {
-                  title: "saw가 아니라 see예요.",
-                  body: "did가 있는 질문에서는 뒤에 과거형 saw를 쓰지 않고 동사원형 see를 써요.",
-                  exampleWrong: "What did you saw? ❌",
-                  exampleCorrect: "What did you see? ✅"
-                },
                 movie: {
-                  title: "여기에는 동사가 필요해요.",
-                  body: "What이 이미 '무엇을'이라는 뜻을 가지고 있어요. 빈칸에는 movie 같은 명사가 아니라 watch/see 같은 동사가 와야 합니다.",
+                  title: "여기엔 동사가 필요해요.",
+                  body: "What이 이미 '무엇을'이에요. 빈칸에는 movie 같은 명사 말고 watch/see 같은 '보다' 동사가 와야 해요.",
                   exampleWrong: "What did you movie? ❌",
                   exampleCorrect: "What did you watch? ✅"
                 }
@@ -1240,38 +1086,16 @@
               ko: "공포 영화 한 편 봤어.",
               prefix: "I watched",
               suffix: ".",
+              orderGloss: "나는(I) + 봤어(watched) + 공포 영화 한 편을(a horror movie)",
               variants: [
-                {
-                  words: ["a", "horror", "movie"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "a horror movie는 '공포 영화 한 편'이라는 장르 표현으로 가장 정확해요."
-                },
-                {
-                  words: ["a", "scary", "movie"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "a scary movie도 자연스러워요. 다만 horror movie는 장르, scary movie는 '무서운 영화'라는 느낌이 더 강해요."
-                }
+                { words: ["a", "horror", "movie"], quality: "best", note: "a horror movie = '공포 영화 한 편'. 가장 정확한 표현이에요." },
+                { words: ["a", "scary", "movie"], quality: "possible", note: "a scary movie도 자연스러워요. '무서운 영화'라는 느낌이에요." }
               ],
-              fillers: ["horror", "scary", "movie", "a", "the", "watch"],
-              hint: "movie는 셀 수 있는 단수 명사예요. '영화 한 편'이면 a movie가 필요해요.",
+              fillers: ["horror", "scary", "movie", "the", "watch"],
+              hint: "a가 빠져도 뜻은 통해요. 더 정확하게는 영화 한 편 앞에 a를 붙여요.",
               pronunciation: "[아이 와치트 어 호러 무비]",
-              tip: "I watched a horror movie. ✅ / I watched horror movie. ❌  단수 movie 앞에는 a를 붙여요.",
-              trapFeedback: {
-                "horror movie": {
-                  title: "a가 빠졌어요.",
-                  body: "movie는 셀 수 있는 단수 명사라서 '영화 한 편'이라고 할 때 a movie가 필요해요.",
-                  exampleWrong: "I watched horror movie. ❌",
-                  exampleCorrect: "I watched a horror movie. ✅"
-                },
-                "scary movie": {
-                  title: "a가 필요해요.",
-                  body: "scary movie도 말은 맞지만, 단수 movie 앞에는 a가 필요합니다.",
-                  exampleWrong: "I watched scary movie. ❌",
-                  exampleCorrect: "I watched a scary movie. ✅"
-                }
-              }
+              tip: "I watched a horror movie. 가 가장 자연스러워요.",
+              trapFeedback: {}
             }
           ]
         },
@@ -1283,69 +1107,42 @@
           pattern: "Where did you ~?",
           patternKo: "어디 갔는지 묻기",
           alt: "여행을 다녀온 친구에게 장소를 묻는 상황",
-          opener: {
-            text: "I traveled last month.",
-            ko: "나 지난달에 여행 갔다 왔어."
-          },
+          opener: { text: "I traveled last month.", ko: "나 지난달에 여행 갔다 왔어." },
           turns: [
             {
               role: "me",
               ko: "어디 갔어?",
               prefix: "Where did you",
               suffix: "?",
+              orderGloss: "어디(where) + 너는 했니(did you) + 가다(go)",
               variants: [
-                {
-                  words: ["go"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Where did you go? 는 '어디 갔어?'라는 가장 기본적이고 자연스러운 질문이에요."
-                }
+                { words: ["go"], quality: "best", note: "Where did you go? 는 '어디 갔어?'라는 가장 기본 표현이에요." },
+                { words: ["visit"], quality: "possible", note: "Where did you visit? 도 쓸 수 있어요. go가 더 쉽고 자연스러워요." }
               ],
-              fillers: ["went", "visit", "to", "the", "Philippines"],
-              hint: "Where did you 다음에는 과거형 went가 아니라 동사원형 go가 와요.",
+              fillers: ["went", "to", "the", "Philippines"],
+              hint: "went라고 해도 통해요. did가 이미 과거라서 더 깔끔한 건 동사원형 go예요.",
               pronunciation: "[웨어 디쥬 고?]",
-              tip: "did 질문에서는 Where did you went? 가 아니라 Where did you go? 입니다.",
-              trapFeedback: {
-                went: {
-                  title: "went가 아니라 go예요.",
-                  body: "did가 이미 과거를 표현하기 때문에 뒤에는 과거형 went가 아니라 동사원형 go가 와요.",
-                  exampleWrong: "Where did you went? ❌",
-                  exampleCorrect: "Where did you go? ✅"
-                },
-                visit: {
-                  title: "visit도 가능하지만 문장이 달라져요.",
-                  body: "Where did you visit? 도 쓸 수는 있지만, 초보자 기본 표현으로는 Where did you go? 가 가장 자연스럽고 쉬워요.",
-                  exampleCorrect: "Where did you go? ✅"
-                }
-              }
+              tip: "Where did you go? 가 가장 자연스러워요.",
+              trapFeedback: {}
             },
             {
               role: "other",
               ko: "필리핀에 갔어.",
               prefix: "I went",
               suffix: ".",
+              orderGloss: "나는(I) + 갔어(went) + ~로(to) + 그 필리핀에(the Philippines)",
               variants: [
-                {
-                  words: ["to", "the", "Philippines"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "필리핀은 영어로 보통 the Philippines라고 말해요. 그래서 to the Philippines가 자연스러워요."
-                }
+                { words: ["to", "the", "Philippines"], quality: "best", note: "필리핀은 보통 the Philippines라고 말해서 to the Philippines가 자연스러워요." },
+                { words: ["to", "Philippines"], quality: "possible", note: "the가 빠져도 충분히 통해요. 원어민은 보통 the Philippines라고 해요." }
               ],
-              fillers: ["to", "Philippines", "in", "at", "the"],
-              hint: "나라 이름이지만 Philippines 앞에는 보통 the를 붙여요.",
+              fillers: ["Philippines", "in", "at"],
+              hint: "the가 빠져도 통해요. went 뒤에는 보통 to를 써요.",
               pronunciation: "[아이 웬트 투 더 필리핀즈]",
-              tip: "I went to the Philippines. 처럼 장소로 이동할 때는 went to를 많이 써요.",
+              tip: "I went to the Philippines. 가 가장 자연스러워요.",
               trapFeedback: {
-                "to philippines": {
-                  title: "the가 필요해요.",
-                  body: "Philippines는 보통 the Philippines라고 말해요.",
-                  exampleWrong: "I went to Philippines. ❌",
-                  exampleCorrect: "I went to the Philippines. ✅"
-                },
                 in: {
-                  title: "went 뒤에는 보통 to를 써요.",
-                  body: "어디로 갔다고 말할 때는 went in보다 went to가 자연스러워요.",
+                  title: "went 뒤에는 보통 to예요.",
+                  body: "어디로 갔다고 할 때는 went in보다 went to가 자연스러워요. 의미는 통해요!",
                   exampleCorrect: "I went to the Philippines. ✅"
                 }
               }
@@ -1358,52 +1155,28 @@
           lessonNo: 28,
           title: "새 물건 어디서 샀는지 묻기",
           pattern: "Where did you get ~?",
-          patternKo: "어디서 샀는지/구했는지 묻기",
+          patternKo: "어디서 샀는지 묻기",
           alt: "친구의 새 물건을 보고 어디서 구했는지 묻는 상황",
-          opener: {
-            text: "I got a new bag.",
-            ko: "나 새 가방 샀어."
-          },
+          opener: { text: "I got a new bag.", ko: "나 새 가방 샀어." },
           turns: [
             {
               role: "me",
               ko: "어디서 샀어?",
               prefix: "Where did you",
               suffix: "?",
+              orderGloss: "어디서(where) + 너는 했니(did you) + 사다·구하다(get) + 그것을(it)",
               variants: [
-                {
-                  words: ["get", "it"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Where did you get it? 은 '그거 어디서 구했어/샀어?'라는 넓은 느낌이라 자연스러워요."
-                },
-                {
-                  words: ["buy", "it"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Where did you buy it? 도 맞아요. 이 표현은 '구매했다'는 뜻이 더 분명해요."
-                }
+                { words: ["get", "it"], quality: "best", note: "Where did you get it? = '그거 어디서 샀어/구했어?'. 넓게 쓰여 자연스러워요." },
+                { words: ["buy", "it"], quality: "possible", note: "Where did you buy it? 도 맞아요. '돈 주고 샀다'는 느낌이 더 분명해요." }
               ],
-              fillers: ["got", "bought", "bag", "from", "where"],
-              hint: "did 뒤에는 get/buy처럼 동사원형을 써요. 그리고 그 물건을 받는 it도 필요해요.",
+              fillers: ["got", "bought", "bag", "where"],
+              hint: "got/bought라고 해도 통해요. 더 깔끔하게는 get/buy. 그 물건은 it으로 받으면 좋아요.",
               pronunciation: "[웨어 디쥬 겟 잇?]",
-              tip: "get은 '사다/구하다/받다'까지 넓게 쓸 수 있어요. buy는 돈을 주고 샀다는 느낌이 더 강해요.",
+              tip: "Where did you get it? 이 가장 무난해요.",
               trapFeedback: {
-                got: {
-                  title: "got이 아니라 get이에요.",
-                  body: "did가 과거를 담당하기 때문에 뒤에는 got이 아니라 get을 써야 해요.",
-                  exampleWrong: "Where did you got it? ❌",
-                  exampleCorrect: "Where did you get it? ✅"
-                },
-                bought: {
-                  title: "bought가 아니라 buy예요.",
-                  body: "did 뒤에는 과거형 bought가 아니라 동사원형 buy가 와요.",
-                  exampleWrong: "Where did you bought it? ❌",
-                  exampleCorrect: "Where did you buy it? ✅"
-                },
                 bag: {
-                  title: "it으로 받는 게 자연스러워요.",
-                  body: "이미 앞에서 bag을 말했기 때문에 다시 bag이라고 하기보다 it으로 받으면 자연스러워요.",
+                  title: "it으로 받으면 더 자연스러워요.",
+                  body: "이미 앞에서 bag을 말했으니 다시 bag 말고 it으로 받으면 좋아요. 그래도 뜻은 통해요!",
                   exampleCorrect: "Where did you get it? ✅"
                 }
               }
@@ -1413,37 +1186,16 @@
               ko: "온라인에서 샀어.",
               prefix: "I",
               suffix: ".",
+              orderGloss: "나는(I) + 구했어·샀어(got) + 그것을(it) + 온라인에서(online)",
               variants: [
-                {
-                  words: ["got", "it", "online"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "I got it online. 은 '온라인에서 샀어/구했어'라는 자연스러운 표현이에요."
-                },
-                {
-                  words: ["bought", "it", "online"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "I bought it online. 도 맞아요. 돈을 주고 샀다는 의미가 더 분명합니다."
-                }
+                { words: ["got", "it", "online"], quality: "best", note: "I got it online. = '온라인에서 샀어/구했어'." },
+                { words: ["bought", "it", "online"], quality: "possible", note: "I bought it online. 도 맞아요. '샀다'가 더 분명해요." }
               ],
               fillers: ["get", "buy", "at", "on", "online"],
-              hint: "과거에 산 일이므로 대답에서는 got/bought처럼 과거형을 써요.",
+              hint: "이미 지난 일이라 got/bought 같은 과거형이 자연스러워요. get/buy로 써도 뜻은 통해요.",
               pronunciation: "[아이 갓 잇 온라인]",
-              tip: "질문에는 did + get, 대답에는 got. 질문과 대답에서 동사 모양이 달라지는 점을 보세요.",
-              trapFeedback: {
-                get: {
-                  title: "대답에서는 got이 자연스러워요.",
-                  body: "이미 과거에 산 일을 말하고 있으므로 I get it online보다 I got it online이 맞아요.",
-                  exampleWrong: "I get it online. ❌",
-                  exampleCorrect: "I got it online. ✅"
-                },
-                buy: {
-                  title: "대답에서는 bought를 써요.",
-                  body: "과거에 샀다는 말이므로 buy가 아니라 bought가 필요해요.",
-                  exampleCorrect: "I bought it online. ✅"
-                }
-              }
+              tip: "I got it online. 이 가장 무난해요.",
+              trapFeedback: {}
             }
           ]
         },
@@ -1455,81 +1207,47 @@
           pattern: "When did you ~?",
           patternKo: "언제 했는지 묻기",
           alt: "어제 만난 사람 이야기를 하는 상황",
-          opener: {
-            text: "I met Sora yesterday.",
-            ko: "나 어제 소라 만났어."
-          },
+          opener: { text: "I met Sora yesterday.", ko: "나 어제 소라 만났어." },
           turns: [
             {
               role: "me",
               ko: "언제 만났어?",
               prefix: "When did you",
               suffix: "?",
+              orderGloss: "언제(when) + 너는 했니(did you) + 만나다(meet) + 그녀를(her)",
               variants: [
-                {
-                  words: ["meet", "her"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "When did you meet her? 는 '그녀를 언제 만났어?'라는 정확한 표현이에요."
-                },
-                {
-                  words: ["see", "her"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "see her도 '만나다/보다'라는 의미로 가능해요. 약속해서 만난 느낌은 meet이 더 분명합니다."
-                }
+                { words: ["meet", "her"], quality: "best", note: "When did you meet her? = '언제 그녀를 만났어?'." },
+                { words: ["see", "her"], quality: "possible", note: "see her도 '만나다/보다'로 가능해요. 약속해 만난 느낌은 meet이 더 분명해요." }
               ],
-              fillers: ["met", "saw", "meet", "Sora", "when"],
-              hint: "did 뒤에는 met이 아니라 meet. 앞에서 Sora를 말했으니 her로 받을 수 있어요.",
+              fillers: ["met", "saw", "Sora", "when"],
+              hint: "met/saw라고 해도 통해요. did가 과거라 더 깔끔한 건 meet/see. Sora는 her로 받으면 좋아요.",
               pronunciation: "[웬 디쥬 밋 허?]",
-              tip: "meet은 처음 만나거나 약속해서 만나다의 느낌, see는 보다/만나다를 넓게 말할 때 쓸 수 있어요.",
-              trapFeedback: {
-                met: {
-                  title: "met이 아니라 meet이에요.",
-                  body: "did 뒤에는 과거형 met이 아니라 동사원형 meet을 써요.",
-                  exampleWrong: "When did you met her? ❌",
-                  exampleCorrect: "When did you meet her? ✅"
-                },
-                saw: {
-                  title: "saw가 아니라 see예요.",
-                  body: "did가 있는 질문에서는 saw가 아니라 see를 씁니다.",
-                  exampleWrong: "When did you saw her? ❌",
-                  exampleCorrect: "When did you see her? ✅"
-                }
-              }
+              tip: "When did you meet her? 가 가장 자연스러워요.",
+              trapFeedback: {}
             },
             {
               role: "other",
               ko: "방과 후에 만났어.",
               prefix: "I met her",
               suffix: ".",
+              orderGloss: "나는(I) + 만났어(met) + 그녀를(her) + 방과 후에(after school)",
               variants: [
-                {
-                  words: ["after", "school"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "after school은 '방과 후에'라는 가장 쉬운 표현이에요."
-                },
-                {
-                  words: ["after", "class"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "after class도 수업 후라는 의미로 가능합니다."
-                }
+                { words: ["after", "school"], quality: "best", note: "after school = '방과 후에'. 가장 쉬운 표현이에요." },
+                { words: ["after", "class"], quality: "possible", note: "after class도 '수업 후에'로 가능해요." }
               ],
-              fillers: ["before", "at", "school", "after"],
-              hint: "'~후에'는 after를 써요.",
+              fillers: ["before", "at", "school"],
+              hint: "'~후에'는 after. before(=전에)나 at(=에서)은 뜻이 달라져요.",
               pronunciation: "[아이 멧 허 애프터 스쿨]",
-              tip: "after school = 방과 후에. before school = 학교 가기 전에.",
+              tip: "after school = 방과 후에.",
               trapFeedback: {
                 before: {
-                  title: "before는 반대 의미예요.",
-                  body: "before는 '~전에', after는 '~후에'라는 뜻이에요.",
+                  title: "before는 반대 뜻이에요.",
+                  body: "before는 '~전에', after는 '~후에'예요. '방과 후'를 말하려면 after school.",
                   exampleCorrect: "I met her after school. ✅"
                 },
                 at: {
-                  title: "방과 후에는 after school이 자연스러워요.",
-                  body: "at school은 '학교에서', after school은 '방과 후에'라는 뜻이에요.",
+                  title: "방과 후에는 after school이에요.",
+                  body: "at school은 '학교에서', after school은 '방과 후에'예요.",
                   exampleCorrect: "I met her after school. ✅"
                 }
               }
@@ -1544,82 +1262,42 @@
           pattern: "Where did you eat?",
           patternKo: "어디서 먹었는지 묻기",
           alt: "점심 이야기를 하는 상황",
-          opener: {
-            text: "I had lunch outside.",
-            ko: "나 밖에서 점심 먹었어."
-          },
+          opener: { text: "I had lunch outside.", ko: "나 밖에서 점심 먹었어." },
           turns: [
             {
               role: "me",
               ko: "어디서 먹었어?",
               prefix: "Where did you",
               suffix: "?",
+              orderGloss: "어디서(where) + 너는 했니(did you) + 먹다(eat)",
               variants: [
-                {
-                  words: ["eat"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Where did you eat? 은 '어디서 먹었어?'라는 가장 간단하고 자연스러운 표현이에요."
-                },
-                {
-                  words: ["have", "lunch"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Where did you have lunch? 도 맞아요. '점심을 어디서 먹었어?'라는 더 구체적인 표현입니다."
-                }
+                { words: ["eat"], quality: "best", note: "Where did you eat? = '어디서 먹었어?'. 가장 간단해요." },
+                { words: ["have", "lunch"], quality: "possible", note: "Where did you have lunch? 도 맞아요. '점심을 어디서?'라는 표현이에요." }
               ],
               fillers: ["ate", "had", "restaurant", "at", "lunch"],
-              hint: "did 뒤에는 ate가 아니라 eat. have lunch도 가능해요.",
+              hint: "ate/had라고 해도 통해요. did가 과거라 더 깔끔한 건 eat/have예요.",
               pronunciation: "[웨어 디쥬 잇?]",
-              tip: "eat은 먹다, have lunch는 점심을 먹다. 둘 다 상황에 맞게 쓸 수 있어요.",
-              trapFeedback: {
-                ate: {
-                  title: "ate가 아니라 eat이에요.",
-                  body: "did 뒤에는 과거형 ate가 아니라 동사원형 eat을 써요.",
-                  exampleWrong: "Where did you ate? ❌",
-                  exampleCorrect: "Where did you eat? ✅"
-                },
-                had: {
-                  title: "had가 아니라 have예요.",
-                  body: "Where did you have lunch? 처럼 did 뒤에는 have를 써야 해요.",
-                  exampleWrong: "Where did you had lunch? ❌",
-                  exampleCorrect: "Where did you have lunch? ✅"
-                }
-              }
+              tip: "Where did you eat? 이 가장 무난해요.",
+              trapFeedback: {}
             },
             {
               role: "other",
               ko: "햄버거 가게에서 먹었어.",
               prefix: "I ate",
               suffix: ".",
+              orderGloss: "나는(I) + 먹었어(ate) + ~에서(at) + 햄버거 가게에서(a burger place)",
               variants: [
-                {
-                  words: ["at", "a", "burger", "place"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "at a burger place는 '햄버거 가게에서'라는 자연스러운 회화 표현이에요."
-                },
-                {
-                  words: ["at", "a", "burger", "restaurant"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "burger restaurant도 가능하지만, 회화에서는 burger place가 더 가볍고 자연스러워요."
-                }
+                { words: ["at", "a", "burger", "place"], quality: "best", note: "at a burger place = '햄버거 가게에서'. 회화에서 자연스러워요." },
+                { words: ["at", "a", "burger", "restaurant"], quality: "possible", note: "burger restaurant도 가능하지만 회화에선 place가 더 가벼워요." }
               ],
-              fillers: ["in", "the", "burger", "place", "a"],
-              hint: "가게나 식당에서 먹었다고 할 때는 at을 많이 써요. 단수 place 앞에는 a가 필요해요.",
+              fillers: ["in", "the", "burger", "place"],
+              hint: "a가 빠져도 통해요. 가게에서 먹었다고 할 때는 in보다 at이 자연스러워요.",
               pronunciation: "[아이 에잇 앳 어 버거 플레이스]",
-              tip: "at a burger place = 햄버거 가게에서. place는 회화에서 가게/장소를 편하게 말할 때 좋아요.",
+              tip: "I ate at a burger place. 가 가장 자연스러워요.",
               trapFeedback: {
-                "at burger place": {
-                  title: "a가 필요해요.",
-                  body: "burger place는 셀 수 있는 단수 표현이라 a burger place라고 해야 자연스러워요.",
-                  exampleWrong: "I ate at burger place. ❌",
-                  exampleCorrect: "I ate at a burger place. ✅"
-                },
                 in: {
-                  title: "여기서는 at이 더 자연스러워요.",
-                  body: "식당/가게에서 먹었다고 할 때는 in보다 at이 더 자연스럽습니다.",
+                  title: "여기선 at이 더 좋아요.",
+                  body: "가게·식당에서 먹었다고 할 때는 in보다 at이 자연스러워요. 뜻은 통해요!",
                   exampleCorrect: "I ate at a burger place. ✅"
                 }
               }
@@ -1634,44 +1312,26 @@
           pattern: "Can I have ~?",
           patternKo: "정중하게 요청하기",
           alt: "카페에서 음료를 주문하는 상황",
-          opener: {
-            text: "Hi! What can I get for you?",
-            ko: "안녕하세요! 뭘 드릴까요?"
-          },
+          opener: { text: "Hi! What can I get for you?", ko: "안녕하세요! 뭘 드릴까요?" },
           turns: [
             {
               role: "me",
               ko: "아메리카노 한 잔 주세요.",
               prefix: "Can I have",
               suffix: "?",
+              orderGloss: "~할 수 있을까요(Can I) + 받다·가지다(have) + 아메리카노 한 잔(an Americano)",
               variants: [
-                {
-                  words: ["an", "Americano"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Americano는 모음 소리로 시작하므로 an Americano가 자연스러워요."
-                },
-                {
-                  words: ["a", "coffee"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "a coffee도 가능하지만, 아메리카노를 정확히 말하려면 an Americano가 좋아요."
-                }
+                { words: ["an", "Americano"], quality: "best", note: "Americano는 모음 소리로 시작해서 an Americano가 자연스러워요." },
+                { words: ["a", "coffee"], quality: "possible", note: "a coffee도 가능해요. 아메리카노를 정확히 말하려면 an Americano." }
               ],
               fillers: ["a", "one", "ice", "the", "Americano"],
-              hint: "Americano 앞에는 a가 아니라 an을 써요.",
+              hint: "a/an 헷갈려도 통해요. 더 정확하게는 모음 앞이라 an Americano.",
               pronunciation: "[캔 아이 해브 언 아메리카노?]",
-              tip: "Can I have ~? 는 주문할 때 '... 주세요'처럼 아주 자주 쓰는 표현이에요.",
+              tip: "Can I have ~? = '... 주세요'. 주문할 때 정말 자주 써요.",
               trapFeedback: {
-                "a americano": {
-                  title: "a가 아니라 an이에요.",
-                  body: "Americano는 모음 소리로 시작해요. 그래서 a Americano가 아니라 an Americano라고 해요.",
-                  exampleWrong: "Can I have a Americano? ❌",
-                  exampleCorrect: "Can I have an Americano? ✅"
-                },
                 ice: {
-                  title: "ice만으로는 부족해요.",
-                  body: "아이스 아메리카노를 말하려면 iced Americano처럼 표현해야 해요. 이번 기본 정답은 an Americano입니다.",
+                  title: "ice만으로는 살짝 부족해요.",
+                  body: "아이스로 말하려면 iced Americano예요. 이번 기본 정답은 an Americano입니다.",
                   exampleCorrect: "Can I have an Americano? ✅"
                 }
               }
@@ -1681,22 +1341,18 @@
               ko: "네. 드시고 가세요, 가져가세요?",
               prefix: "Sure.",
               suffix: "?",
+              orderGloss: "여기서 드세요(For here) + 아니면(or) + 가져가세요(to go)",
               variants: [
-                {
-                  words: ["For", "here", "or", "to", "go"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "For here or to go? 는 카페에서 정말 자주 듣는 표현이에요."
-                }
+                { words: ["For", "here", "or", "to", "go"], quality: "best", note: "For here or to go? 는 카페에서 정말 자주 듣는 표현이에요." }
               ],
               fillers: ["take", "out", "here", "go"],
-              hint: "매장에서 먹을지 가져갈지 묻는 고정 표현이에요.",
+              hint: "매장에서 먹을지 가져갈지 묻는 통째 표현이에요. for here(매장) / to go(포장).",
               pronunciation: "[포 히얼 오어 투 고?]",
               tip: "for here = 매장에서, to go = 포장해서.",
               trapFeedback: {
                 "take out": {
-                  title: "의미는 통하지만 표현이 달라요.",
-                  body: "한국식으로 '테이크아웃'이라고 하지만, 직원이 묻는 자연스러운 문장은 For here or to go? 입니다.",
+                  title: "뜻은 통하지만 표현이 달라요.",
+                  body: "'테이크아웃'이라고 많이 쓰지만, 직원이 묻는 자연스러운 문장은 For here or to go? 예요.",
                   exampleCorrect: "For here or to go? ✅"
                 }
               }
@@ -1711,43 +1367,26 @@
           pattern: "Can I have ~?",
           patternKo: "필요한 물건 요청하기",
           alt: "식당에서 메뉴판을 요청하는 상황",
-          opener: {
-            text: "I'll be right with you.",
-            ko: "곧 주문 도와드릴게요."
-          },
+          opener: { text: "I'll be right with you.", ko: "곧 주문 도와드릴게요." },
           turns: [
             {
               role: "me",
               ko: "메뉴판 좀 받을 수 있을까요?",
               prefix: "Can I have",
               suffix: "?",
+              orderGloss: "받을 수 있을까요(Can I have) + 그 메뉴판을(the menu)",
               variants: [
-                {
-                  words: ["the", "menu"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "식당에 있는 그 메뉴판을 요청하는 상황이라 the menu가 자연스러워요."
-                },
-                {
-                  words: ["a", "menu"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "a menu도 가능해요. 메뉴판 하나를 요청한다는 느낌입니다."
-                }
+                { words: ["the", "menu"], quality: "best", note: "식당에 있는 그 메뉴판을 요청하는 거라 the menu가 자연스러워요." },
+                { words: ["a", "menu"], quality: "possible", note: "a menu도 가능해요. 메뉴판 하나를 달라는 느낌이에요." }
               ],
               fillers: ["menus", "one", "please", "book"],
-              hint: "메뉴판은 menu. 식당에 있는 그 메뉴판이면 the menu가 자연스러워요.",
+              hint: "메뉴판은 menu. the든 a든 큰 차이 없이 통해요.",
               pronunciation: "[캔 아이 해브 더 메뉴?]",
-              tip: "Can I have the menu? 는 식당에서 바로 쓸 수 있는 생존 표현이에요.",
+              tip: "Can I have the menu? 는 식당 생존 표현이에요.",
               trapFeedback: {
-                menus: {
-                  title: "menus는 보통 여기서 어색해요.",
-                  body: "혼자 메뉴판 하나를 요청할 때는 the menu 또는 a menu가 자연스러워요.",
-                  exampleCorrect: "Can I have the menu? ✅"
-                },
                 book: {
-                  title: "menu가 맞아요.",
-                  body: "식당의 메뉴판은 영어로 menu라고 해요. book은 일반적인 책이에요.",
+                  title: "메뉴판은 menu예요.",
+                  body: "식당 메뉴판은 영어로 menu라고 해요. book은 일반적인 책이에요.",
                   exampleCorrect: "Can I have the menu? ✅"
                 }
               }
@@ -1757,28 +1396,19 @@
               ko: "여기 있습니다.",
               prefix: "",
               suffix: ".",
+              orderGloss: "여기(here) + 당신(you) + 가요(go) = 여기 있어요",
               variants: [
-                {
-                  words: ["Here", "you", "go"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Here you go. 는 무언가를 건네줄 때 가장 많이 쓰는 표현이에요."
-                },
-                {
-                  words: ["Here", "it", "is"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Here it is. 도 '여기 있습니다'라는 뜻으로 자연스러워요."
-                }
+                { words: ["Here", "you", "go"], quality: "best", note: "Here you go. 는 뭔가 건넬 때 가장 많이 쓰는 표현이에요." },
+                { words: ["Here", "it", "is"], quality: "possible", note: "Here it is. 도 '여기 있습니다'로 자연스러워요." }
               ],
               fillers: ["There", "you", "are", "here"],
-              hint: "물건을 건네줄 때는 Here you go. 를 통째로 외워두면 좋아요.",
+              hint: "건네줄 때 Here you go. 를 통째로 외워두면 좋아요.",
               pronunciation: "[히얼 유 고]",
-              tip: "Here you go. 는 카페, 식당, 매장 어디서든 자주 들을 수 있어요.",
+              tip: "Here you go. 는 카페·식당·매장 어디서든 들을 수 있어요.",
               trapFeedback: {
                 there: {
-                  title: "여기서는 Here가 자연스러워요.",
-                  body: "바로 앞에서 건네주는 상황이라 There보다 Here가 자연스럽습니다.",
+                  title: "여기선 Here가 자연스러워요.",
+                  body: "바로 앞에서 건네주는 상황이라 There보다 Here가 좋아요.",
                   exampleCorrect: "Here you go. ✅"
                 }
               }
@@ -1793,44 +1423,31 @@
           pattern: "Can I have ~?",
           patternKo: "정중하게 요청하기",
           alt: "식당에서 물을 요청하는 상황",
-          opener: {
-            text: "This dish is a little spicy.",
-            ko: "이 음식은 조금 매워요."
-          },
+          opener: { text: "This dish is a little spicy.", ko: "이 음식은 조금 매워요." },
           turns: [
             {
               role: "me",
               ko: "물 좀 받을 수 있을까요?",
               prefix: "Can I have",
               suffix: "?",
+              orderGloss: "받을 수 있을까요(Can I have) + 약간의(some) + 물을(water)",
               variants: [
-                {
-                  words: ["some", "water"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "water는 셀 수 없는 명사로 많이 쓰기 때문에 some water가 자연스러워요."
-                },
-                {
-                  words: ["a", "glass", "of", "water"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "a glass of water는 '물 한 잔'이라는 더 구체적인 표현이에요."
-                }
+                { words: ["some", "water"], quality: "best", note: "water는 셀 수 없는 명사라 some water가 자연스러워요." },
+                { words: ["a", "glass", "of", "water"], quality: "possible", note: "a glass of water = '물 한 잔'. 더 구체적인 표현이에요." }
               ],
               fillers: ["many", "waters", "juice", "the"],
-              hint: "water는 보통 some water 또는 a glass of water로 말해요.",
+              hint: "water는 some water 또는 a glass of water로 말해요.",
               pronunciation: "[캔 아이 해브 썸 워터?]",
-              tip: "Can I have some water? 는 식당에서 바로 쓸 수 있는 아주 자연스러운 표현이에요.",
+              tip: "Can I have some water? 가 가장 자연스러워요.",
               trapFeedback: {
                 waters: {
-                  title: "waters는 여기서 어색해요.",
-                  body: "물은 보통 셀 수 없는 명사로 써서 some water라고 해요.",
-                  exampleWrong: "Can I have waters? ❌",
+                  title: "물은 보통 water로 써요.",
+                  body: "물은 셀 수 없는 명사라 waters보다 some water가 자연스러워요.",
                   exampleCorrect: "Can I have some water? ✅"
                 },
                 many: {
-                  title: "water에는 many보다 some이 자연스러워요.",
-                  body: "many는 셀 수 있는 복수 명사와 잘 어울려요. water는 some water가 자연스럽습니다.",
+                  title: "water에는 some이 더 좋아요.",
+                  body: "many는 셀 수 있는 복수와 어울려요. water는 some water가 자연스러워요.",
                   exampleCorrect: "Can I have some water? ✅"
                 }
               }
@@ -1840,32 +1457,16 @@
               ko: "바로 가져다드릴게요.",
               prefix: "I'll",
               suffix: ".",
+              orderGloss: "제가(I'll) + 가져올게요(bring) + 그것을(it) + 바로(right away)",
               variants: [
-                {
-                  words: ["bring", "it", "right", "away"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "I'll bring it right away. 는 '바로 가져다드릴게요'라는 정중한 응답이에요."
-                },
-                {
-                  words: ["get", "it", "for", "you"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "I'll get it for you. 도 자연스럽습니다. '제가 가져다드릴게요'라는 느낌이에요."
-                }
+                { words: ["bring", "it", "right", "away"], quality: "best", note: "I'll bring it right away. = '바로 가져다드릴게요'." },
+                { words: ["get", "it", "for", "you"], quality: "possible", note: "I'll get it for you. 도 자연스러워요." }
               ],
-              fillers: ["brought", "bring", "water", "soon"],
-              hint: "will / I'll 뒤에는 동사원형이 와요. brought가 아니라 bring.",
+              fillers: ["brought", "water", "soon"],
+              hint: "I'll 뒤에는 동사원형. brought라고 해도 통하지만 bring이 깔끔해요.",
               pronunciation: "[아일 브링 잇 라잇 어웨이]",
               tip: "right away = 바로, 즉시.",
-              trapFeedback: {
-                brought: {
-                  title: "brought가 아니라 bring이에요.",
-                  body: "I'll 뒤에는 동사원형이 와야 해요. 그래서 brought가 아니라 bring입니다.",
-                  exampleWrong: "I'll brought it right away. ❌",
-                  exampleCorrect: "I'll bring it right away. ✅"
-                }
-              }
+              trapFeedback: {}
             }
           ]
         },
@@ -1877,44 +1478,32 @@
           pattern: "Can I have ~?",
           patternKo: "계산 후 요청하기",
           alt: "계산대에서 영수증을 요청하는 상황",
-          opener: {
-            text: "Your total is twelve dollars.",
-            ko: "총 12달러입니다."
-          },
+          opener: { text: "Your total is twelve dollars.", ko: "총 12달러입니다." },
           turns: [
             {
               role: "me",
               ko: "영수증 받을 수 있을까요?",
               prefix: "Can I have",
               suffix: "?",
+              orderGloss: "받을 수 있을까요(Can I have) + 영수증 하나를(a receipt)",
               variants: [
-                {
-                  words: ["a", "receipt"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "a receipt는 '영수증 하나'라는 자연스러운 표현이에요."
-                },
-                {
-                  words: ["the", "receipt"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "이미 계산한 그 영수증을 말하는 느낌이면 the receipt도 가능해요."
-                }
+                { words: ["a", "receipt"], quality: "best", note: "a receipt = '영수증 하나'. 자연스러운 표현이에요." },
+                { words: ["the", "receipt"], quality: "possible", note: "방금 계산한 그 영수증이면 the receipt도 가능해요." }
               ],
               fillers: ["recipe", "paper", "check", "one"],
-              hint: "영수증은 receipt. recipe는 요리법이에요.",
+              hint: "영수증은 receipt. recipe(요리법)와 철자가 비슷해 헷갈리기 쉬워요.",
               pronunciation: "[캔 아이 해브 어 리싯?]",
-              tip: "receipt의 p는 거의 발음하지 않아요. '리싯'에 가깝게 들립니다.",
+              tip: "receipt의 p는 거의 발음 안 해요. '리싯'에 가까워요.",
               trapFeedback: {
                 recipe: {
                   title: "recipe가 아니라 receipt예요.",
-                  body: "recipe는 요리법, receipt는 영수증이에요. 철자가 비슷해서 많이 헷갈려요.",
+                  body: "recipe는 요리법, receipt는 영수증이에요. 뜻이 완전히 달라요!",
                   exampleWrong: "Can I have a recipe? ❌",
                   exampleCorrect: "Can I have a receipt? ✅"
                 },
                 paper: {
-                  title: "paper보다 receipt가 정확해요.",
-                  body: "영수증은 영어로 receipt라고 해요.",
+                  title: "영수증은 receipt예요.",
+                  body: "paper(종이)보다 receipt가 정확해요.",
                   exampleCorrect: "Can I have a receipt? ✅"
                 }
               }
@@ -1924,27 +1513,18 @@
               ko: "네, 여기 있습니다.",
               prefix: "Sure.",
               suffix: ".",
+              orderGloss: "여기(here) + 그것이(it) + 있어요(is) = 여기 있습니다",
               variants: [
-                {
-                  words: ["Here", "it", "is"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Here it is. 는 요청한 물건을 건네줄 때 자연스러워요."
-                },
-                {
-                  words: ["Here", "you", "go"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Here you go. 도 아주 자연스러운 표현이에요."
-                }
+                { words: ["Here", "it", "is"], quality: "best", note: "Here it is. 는 요청한 물건을 건넬 때 자연스러워요." },
+                { words: ["Here", "you", "go"], quality: "possible", note: "Here you go. 도 아주 자연스러워요." }
               ],
-              fillers: ["There", "it", "goes", "receipt"],
-              hint: "바로 건네주는 상황이면 Here로 시작하면 자연스러워요.",
+              fillers: ["There", "goes", "receipt"],
+              hint: "바로 건네주는 상황이면 Here로 시작하면 좋아요.",
               pronunciation: "[슈어. 히얼 잇 이즈]",
-              tip: "Here it is. = 여기 있습니다. / Here you go. = 여기요.",
+              tip: "Here it is. / Here you go. 둘 다 '여기 있어요'예요.",
               trapFeedback: {
                 there: {
-                  title: "여기서는 Here가 더 좋아요.",
+                  title: "여기선 Here가 더 좋아요.",
                   body: "직접 건네주는 상황에서는 There보다 Here가 자연스러워요.",
                   exampleCorrect: "Here it is. ✅"
                 }
@@ -1960,44 +1540,26 @@
           pattern: "Can I have ~?",
           patternKo: "다른 옵션 요청하기",
           alt: "옷가게에서 더 작은 사이즈를 요청하는 상황",
-          opener: {
-            text: "That jacket looks good on you.",
-            ko: "그 재킷 잘 어울리네요."
-          },
+          opener: { text: "That jacket looks good on you.", ko: "그 재킷 잘 어울리네요." },
           turns: [
             {
               role: "me",
               ko: "더 작은 사이즈로 받을 수 있을까요?",
               prefix: "Can I have",
               suffix: "?",
+              orderGloss: "받을 수 있을까요(Can I have) + 더 작은(smaller) + 사이즈를(size)",
               variants: [
-                {
-                  words: ["a", "smaller", "size"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "a smaller size는 '더 작은 사이즈 하나'라는 자연스러운 표현이에요."
-                },
-                {
-                  words: ["this", "in", "a", "smaller", "size"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Can I have this in a smaller size? 는 '이거 더 작은 사이즈로 받을 수 있을까요?'라는 정확한 표현이에요."
-                }
+                { words: ["a", "smaller", "size"], quality: "best", note: "a smaller size = '더 작은 사이즈 하나'." },
+                { words: ["this", "in", "a", "smaller", "size"], quality: "possible", note: "Can I have this in a smaller size? = '이거 더 작은 사이즈로?'." }
               ],
-              fillers: ["small", "smaller", "one", "the"],
-              hint: "'더 작은'은 smaller. 단수 size 앞에는 a가 필요해요.",
+              fillers: ["small", "one", "the"],
+              hint: "a가 빠져도 통해요. '더 작은'은 small이 아니라 smaller예요.",
               pronunciation: "[캔 아이 해브 어 스몰러 사이즈?]",
               tip: "small = 작은, smaller = 더 작은.",
               trapFeedback: {
                 small: {
-                  title: "small보다 smaller가 맞아요.",
-                  body: "지금보다 더 작은 사이즈를 원하므로 small size보다 smaller size가 자연스러워요.",
-                  exampleCorrect: "Can I have a smaller size? ✅"
-                },
-                "smaller size": {
-                  title: "a가 필요해요.",
-                  body: "size는 셀 수 있는 단수 명사라서 a smaller size라고 해야 해요.",
-                  exampleWrong: "Can I have smaller size? ❌",
+                  title: "지금보다 작은 건 smaller예요.",
+                  body: "지금보다 더 작은 걸 원하니 small size보다 smaller size가 좋아요.",
                   exampleCorrect: "Can I have a smaller size? ✅"
                 }
               }
@@ -2007,32 +1569,16 @@
               ko: "확인해 볼게요.",
               prefix: "Let me",
               suffix: ".",
+              orderGloss: "제가 ~할게요(Let me) + 확인하다(check)",
               variants: [
-                {
-                  words: ["check"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Let me check. 는 '확인해 볼게요'라는 짧고 자연스러운 표현이에요."
-                },
-                {
-                  words: ["check", "for", "you"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Let me check for you. 는 '제가 확인해드릴게요'라는 더 친절한 느낌이에요."
-                }
+                { words: ["check"], quality: "best", note: "Let me check. = '확인해 볼게요'. 짧고 자연스러워요." },
+                { words: ["check", "for", "you"], quality: "possible", note: "Let me check for you. = '제가 확인해드릴게요'." }
               ],
               fillers: ["checking", "see", "look"],
-              hint: "Let me 뒤에는 동사원형 check가 와요.",
+              hint: "Let me 뒤에는 동사원형 check. checking이라고 해도 뜻은 통해요.",
               pronunciation: "[렛 미 체크]",
-              tip: "Let me check. 는 매장, 식당, 호텔에서 직원이 자주 쓰는 말이에요.",
-              trapFeedback: {
-                checking: {
-                  title: "checking이 아니라 check예요.",
-                  body: "Let me 뒤에는 동사원형이 와요. 그래서 checking이 아니라 check입니다.",
-                  exampleWrong: "Let me checking. ❌",
-                  exampleCorrect: "Let me check. ✅"
-                }
-              }
+              tip: "Let me check. 는 매장·식당·호텔 직원이 자주 써요.",
+              trapFeedback: {}
             }
           ]
         },
@@ -2044,79 +1590,42 @@
           pattern: "Have you ~?",
           patternKo: "경험 묻기",
           alt: "음식이나 간식을 추천받는 상황",
-          opener: {
-            text: "This snack is really popular here.",
-            ko: "이 간식 여기서 정말 인기 많아요."
-          },
+          opener: { text: "This snack is really popular here.", ko: "이 간식 여기서 정말 인기 많아요." },
           turns: [
             {
               role: "me",
               ko: "이거 전에 먹어본 적 있어?",
               prefix: "Have you",
               suffix: "?",
+              orderGloss: "너는 ~해봤니(Have you) + 먹어·시도해봤다(tried) + 이것을(this) + 전에(before)",
               variants: [
-                {
-                  words: ["tried", "this", "before"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Have you tried this before? 는 음식이나 경험을 물을 때 아주 자연스러워요."
-                },
-                {
-                  words: ["had", "this", "before"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Have you had this before? 도 음식에 대해 '먹어본 적 있어?'라는 뜻으로 가능해요."
-                }
+                { words: ["tried", "this", "before"], quality: "best", note: "Have you tried this before? 는 음식·경험을 물을 때 아주 자연스러워요." },
+                { words: ["had", "this", "before"], quality: "possible", note: "Have you had this before? 도 음식에 '먹어본 적 있어?'로 가능해요." }
               ],
               fillers: ["try", "ate", "ever", "this"],
-              hint: "Have you 뒤에는 과거분사 tried/had를 써요.",
+              hint: "Have you 뒤에는 보통 과거분사 tried/had. try라고 해도 뜻은 통해요.",
               pronunciation: "[해브 유 트라이드 디스 비포어?]",
-              tip: "try는 '시도하다/먹어보다'라는 뜻으로 음식 경험을 말할 때 자주 써요.",
-              trapFeedback: {
-                try: {
-                  title: "try가 아니라 tried예요.",
-                  body: "Have you 다음에는 동사원형 try가 아니라 과거분사 tried가 와요.",
-                  exampleWrong: "Have you try this before? ❌",
-                  exampleCorrect: "Have you tried this before? ✅"
-                },
-                ate: {
-                  title: "ate보다 tried가 자연스러워요.",
-                  body: "Have you 다음에는 과거형 ate가 아니라 과거분사 형태를 써야 해요. 음식 경험은 tried가 특히 자연스럽습니다.",
-                  exampleCorrect: "Have you tried this before? ✅"
-                }
-              }
+              tip: "Have you tried this before? 가 가장 자연스러워요.",
+              trapFeedback: {}
             },
             {
               role: "other",
               ko: "응, 먹어본 적 있어.",
               prefix: "Yes,",
               suffix: ".",
+              orderGloss: "응(Yes) + 나는(I) + 그래(have)",
               variants: [
-                {
-                  words: ["I", "have"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Have you로 물으면 Yes, I have. 로 짧게 대답할 수 있어요."
-                },
-                {
-                  words: ["I've", "tried", "it"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "I've tried it. 은 '먹어봤어/시도해봤어'라는 조금 더 구체적인 대답이에요."
-                }
+                { words: ["I", "have"], quality: "best", note: "Have you로 물으면 Yes, I have. 로 짧게 답해요." },
+                { words: ["I've", "tried", "it"], quality: "possible", note: "I've tried it. = '먹어봤어'. 조금 더 구체적이에요." }
               ],
-              fillers: ["I", "did", "have", "tried"],
-              hint: "Have you 질문에는 Yes, I have. 가 기본 대답이에요.",
+              fillers: ["have", "tried", "did"],
+              alsoOk: [
+                { words: ["I", "did"], note: "Yes, I did. 도 알아들어요. 질문이 Have you ~? 라서 Yes, I have. 가 더 자연스러워요." }
+              ],
+              hint: "Have you 질문엔 Yes, I have. 가 기본 대답이에요.",
               pronunciation: "[예스, 아이 해브]",
-              tip: "Do you로 물으면 Yes, I do. / Have you로 물으면 Yes, I have.",
-              trapFeedback: {
-                did: {
-                  title: "여기서는 did보다 have예요.",
-                  body: "질문이 Have you로 시작했기 때문에 대답도 Yes, I have. 가 자연스러워요.",
-                  exampleWrong: "Yes, I did. △",
-                  exampleCorrect: "Yes, I have. ✅"
-                }
-              }
+              tip: "Do you → Yes, I do. / Have you → Yes, I have.",
+              trapFeedback: {}
             }
           ]
         },
@@ -2128,79 +1637,42 @@
           pattern: "Have you been to ~?",
           patternKo: "장소 경험 묻기",
           alt: "여행지 이야기를 하는 상황",
-          opener: {
-            text: "Jeju Island is beautiful in spring.",
-            ko: "제주도는 봄에 아름다워."
-          },
+          opener: { text: "Jeju Island is beautiful in spring.", ko: "제주도는 봄에 아름다워." },
           turns: [
             {
               role: "me",
               ko: "제주도에 가본 적 있어?",
               prefix: "Have you",
               suffix: "?",
+              orderGloss: "너는 가봤니(Have you been) + ~에(to) + 제주도(Jeju Island)",
               variants: [
-                {
-                  words: ["been", "to", "Jeju", "Island"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Have you been to 장소? 는 '~에 가본 적 있어?'라는 대표 표현이에요."
-                },
-                {
-                  words: ["visited", "Jeju", "Island"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Have you visited Jeju Island? 도 가능해요. 다만 초보자 기본 패턴은 been to가 좋아요."
-                }
+                { words: ["been", "to", "Jeju", "Island"], quality: "best", note: "Have you been to + 장소? = '~에 가본 적 있어?'. 대표 표현이에요." },
+                { words: ["visited", "Jeju", "Island"], quality: "possible", note: "Have you visited Jeju Island? 도 가능해요. 기본 패턴은 been to가 좋아요." }
               ],
               fillers: ["went", "go", "in", "at"],
-              hint: "장소에 가본 경험은 Have you been to + 장소? 로 말해요.",
+              hint: "장소 경험은 Have you been to + 장소. went/go라고 하면 살짝 어색하지만 뜻은 통해요.",
               pronunciation: "[해브 유 빈 투 제주 아일랜드?]",
-              tip: "been to는 '가본 적 있다'라는 경험 표현이에요.",
-              trapFeedback: {
-                went: {
-                  title: "went가 아니라 been이 필요해요.",
-                  body: "Have you 다음에는 과거형 went가 아니라 과거분사 been을 써요.",
-                  exampleWrong: "Have you went to Jeju Island? ❌",
-                  exampleCorrect: "Have you been to Jeju Island? ✅"
-                },
-                go: {
-                  title: "go가 아니라 been to가 자연스러워요.",
-                  body: "'가본 적 있어?'라는 경험은 Have you been to ~? 로 말합니다.",
-                  exampleCorrect: "Have you been to Jeju Island? ✅"
-                }
-              }
+              tip: "been to = 가본 적 있다.",
+              trapFeedback: {}
             },
             {
               role: "other",
               ko: "아니, 아직 없어.",
               prefix: "No,",
               suffix: ".",
+              orderGloss: "아니(No) + 나는(I) + 안 그래(haven't)",
               variants: [
-                {
-                  words: ["I", "haven't"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "No, I haven't. 는 Have you 질문에 대한 기본 부정 대답이에요."
-                },
-                {
-                  words: ["not", "yet"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "No, not yet. 은 '아니, 아직'이라는 짧고 자연스러운 대답이에요."
-                }
+                { words: ["I", "haven't"], quality: "best", note: "No, I haven't. 는 Have you 질문의 기본 부정 대답이에요." },
+                { words: ["not", "yet"], quality: "possible", note: "No, not yet. = '아니, 아직'. 짧고 자연스러워요." }
               ],
-              fillers: ["I", "didn't", "haven't", "yet"],
-              hint: "Have you 질문의 부정 대답은 I haven't.",
+              fillers: ["I", "haven't", "yet", "didn't"],
+              alsoOk: [
+                { words: ["I", "didn't"], note: "No, I didn't. 도 알아들어요. 질문이 Have you ~? 라서 No, I haven't. 가 더 자연스러워요." }
+              ],
+              hint: "Have you 질문의 부정 대답은 I haven't. / not yet.",
               pronunciation: "[노, 아이 해븐트]",
-              tip: "not yet = 아직 아니야 / 아직 안 해봤어.",
-              trapFeedback: {
-                "didn't": {
-                  title: "여기서는 didn't보다 haven't예요.",
-                  body: "질문이 Have you로 시작했기 때문에 No, I haven't. 가 자연스러워요.",
-                  exampleWrong: "No, I didn't. △",
-                  exampleCorrect: "No, I haven't. ✅"
-                }
-              }
+              tip: "not yet = 아직 안 해봤어.",
+              trapFeedback: {}
             }
           ]
         },
@@ -2212,91 +1684,40 @@
           pattern: "Have you seen ~?",
           patternKo: "본 적 있는지 묻기",
           alt: "영화를 고르는 상황",
-          opener: {
-            text: "This movie is famous.",
-            ko: "이 영화 유명해."
-          },
+          opener: { text: "This movie is famous.", ko: "이 영화 유명해." },
           turns: [
             {
               role: "me",
               ko: "이 영화 본 적 있어?",
               prefix: "Have you",
               suffix: "?",
+              orderGloss: "너는 봤니(Have you seen) + 이 영화를(this movie)",
               variants: [
-                {
-                  words: ["seen", "this", "movie"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Have you seen this movie? 는 영화 본 경험을 물을 때 가장 자연스러워요."
-                },
-                {
-                  words: ["watched", "this", "movie"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Have you watched this movie? 도 맞아요. 다만 영화 경험을 물을 때는 seen이 더 흔해요."
-                }
+                { words: ["seen", "this", "movie"], quality: "best", note: "Have you seen this movie? 는 영화 경험을 물을 때 가장 자연스러워요." },
+                { words: ["watched", "this", "movie"], quality: "possible", note: "Have you watched this movie? 도 맞아요. 경험엔 seen이 더 흔해요." }
               ],
               fillers: ["saw", "see", "watch", "the"],
-              hint: "Have you 뒤에는 과거분사 seen/watched가 와요. saw는 안 돼요.",
+              hint: "Have you 뒤에는 보통 seen/watched. saw/see라고 해도 뜻은 통해요.",
               pronunciation: "[해브 유 씬 디스 무비?]",
-              tip: "영화는 watch도 가능하지만, '본 적 있어?' 경험을 물을 때는 seen이 매우 자연스러워요.",
-              trapFeedback: {
-                saw: {
-                  title: "saw가 아니라 seen이에요.",
-                  body: "Have you 다음에는 과거형 saw가 아니라 과거분사 seen이 와야 해요.",
-                  exampleWrong: "Have you saw this movie? ❌",
-                  exampleCorrect: "Have you seen this movie? ✅"
-                },
-                see: {
-                  title: "see가 아니라 seen이에요.",
-                  body: "Have you 뒤에는 동사원형 see가 아니라 과거분사 seen을 써요.",
-                  exampleWrong: "Have you see this movie? ❌",
-                  exampleCorrect: "Have you seen this movie? ✅"
-                },
-                watch: {
-                  title: "watch를 쓰려면 watched가 필요해요.",
-                  body: "Have you watched this movie? 는 맞지만, Have you watch this movie? 는 틀려요.",
-                  exampleCorrect: "Have you watched this movie? ✅"
-                }
-              }
+              tip: "경험을 물을 땐 seen이 매우 자연스러워요.",
+              trapFeedback: {}
             },
             {
               role: "other",
               ko: "두 번 봤어.",
               prefix: "I've",
               suffix: ".",
+              orderGloss: "나는 봤어(I've seen) + 그것을(it) + 두 번(twice)",
               variants: [
-                {
-                  words: ["seen", "it", "twice"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "I've seen it twice. 는 '두 번 봤어'라는 가장 자연스러운 표현이에요."
-                },
-                {
-                  words: ["watched", "it", "twice"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "I've watched it twice. 도 맞아요. 영화 관람 행위를 강조하는 느낌입니다."
-                },
-                {
-                  words: ["watched", "it", "two", "times"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "two times도 가능하지만 회화에서는 twice가 더 깔끔해요."
-                }
+                { words: ["seen", "it", "twice"], quality: "best", note: "I've seen it twice. = '두 번 봤어'. 가장 자연스러워요." },
+                { words: ["watched", "it", "twice"], quality: "possible", note: "I've watched it twice. 도 맞아요." },
+                { words: ["watched", "it", "two", "times"], quality: "possible", note: "two times도 되지만 회화에선 twice가 깔끔해요." }
               ],
               fillers: ["saw", "two", "times", "again"],
-              hint: "I've 뒤에는 seen/watched 같은 과거분사가 와요. '두 번'은 twice가 좋아요.",
+              hint: "I've 뒤에는 보통 seen/watched. '두 번'은 twice가 깔끔해요.",
               pronunciation: "[아이브 씬 잇 트와이스]",
-              tip: "twice = 두 번. one time보다 once, two times보다 twice가 더 자연스러울 때가 많아요.",
-              trapFeedback: {
-                saw: {
-                  title: "saw가 아니라 seen이에요.",
-                  body: "I've는 I have의 줄임말이라 뒤에는 과거분사 seen이 와요.",
-                  exampleWrong: "I've saw it twice. ❌",
-                  exampleCorrect: "I've seen it twice. ✅"
-                }
-              }
+              tip: "twice = 두 번.",
+              trapFeedback: {}
             }
           ]
         },
@@ -2308,79 +1729,42 @@
           pattern: "Have you finished ~?",
           patternKo: "끝냈는지 묻기",
           alt: "수업 전에 숙제를 확인하는 상황",
-          opener: {
-            text: "Class starts in five minutes.",
-            ko: "수업 5분 뒤에 시작해."
-          },
+          opener: { text: "Class starts in five minutes.", ko: "수업 5분 뒤에 시작해." },
           turns: [
             {
               role: "me",
               ko: "숙제 다 했어?",
               prefix: "Have you",
               suffix: "?",
+              orderGloss: "너는 끝냈니(Have you finished) + 너의(your) + 숙제를(homework)",
               variants: [
-                {
-                  words: ["finished", "your", "homework"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Have you finished your homework? 는 '숙제 다 했어?'라는 자연스러운 표현이에요."
-                },
-                {
-                  words: ["done", "your", "homework"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Have you done your homework? 도 매우 자연스럽습니다."
-                }
+                { words: ["finished", "your", "homework"], quality: "best", note: "Have you finished your homework? = '숙제 다 했어?'." },
+                { words: ["done", "your", "homework"], quality: "possible", note: "Have you done your homework? 도 매우 자연스러워요." }
               ],
               fillers: ["finish", "did", "the", "homework"],
-              hint: "Have you 뒤에는 finished/done 같은 과거분사가 와요.",
+              hint: "Have you 뒤에는 보통 finished/done. finish/did라고 해도 뜻은 통해요.",
               pronunciation: "[해브 유 피니시트 유어 홈워크?]",
-              tip: "finish는 끝내다, do homework는 숙제를 하다. 둘 다 숙제 완료를 말할 수 있어요.",
-              trapFeedback: {
-                finish: {
-                  title: "finish가 아니라 finished예요.",
-                  body: "Have you 다음에는 동사원형 finish가 아니라 과거분사 finished가 필요해요.",
-                  exampleWrong: "Have you finish your homework? ❌",
-                  exampleCorrect: "Have you finished your homework? ✅"
-                },
-                did: {
-                  title: "did보다 done이 맞아요.",
-                  body: "Have you와 함께 쓰려면 did가 아니라 done을 써요.",
-                  exampleWrong: "Have you did your homework? ❌",
-                  exampleCorrect: "Have you done your homework? ✅"
-                }
-              }
+              tip: "finish = 끝내다, do homework = 숙제를 하다.",
+              trapFeedback: {}
             },
             {
               role: "other",
               ko: "아니, 아직 안 했어.",
               prefix: "No,",
               suffix: ".",
+              orderGloss: "아니(No) + 아직 안 했어(not yet)",
               variants: [
-                {
-                  words: ["not", "yet"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "No, not yet. 은 '아니, 아직'이라는 짧고 자연스러운 대답이에요."
-                },
-                {
-                  words: ["I", "haven't", "finished", "it", "yet"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "No, I haven't finished it yet. 은 더 완전한 문장입니다."
-                }
+                { words: ["not", "yet"], quality: "best", note: "No, not yet. = '아니, 아직'. 짧고 자연스러워요." },
+                { words: ["I", "haven't", "finished", "it", "yet"], quality: "possible", note: "No, I haven't finished it yet. 은 완전한 문장이에요." }
               ],
-              fillers: ["didn't", "yet", "finish"],
-              hint: "짧게 말하면 No, not yet. 으로 충분해요.",
+              fillers: ["didn't", "yet", "finish", "I", "haven't"],
+              alsoOk: [
+                { words: ["I", "didn't"], note: "I didn't. 도 통해요. 더 자연스럽게는 No, not yet. 또는 I haven't finished it yet." }
+              ],
+              hint: "짧게는 No, not yet. 으로 충분해요.",
               pronunciation: "[노, 낫 옛]",
-              tip: "not yet = 아직 아니야. 숙제, 식사, 준비 여부에 모두 쓸 수 있어요.",
-              trapFeedback: {
-                "didn't": {
-                  title: "Have you 질문에는 haven't가 자연스러워요.",
-                  body: "완전한 문장으로 말하면 I haven't finished it yet. 입니다.",
-                  exampleCorrect: "No, not yet. ✅"
-                }
-              }
+              tip: "not yet = 아직 아니야.",
+              trapFeedback: {}
             }
           ]
         },
@@ -2392,84 +1776,42 @@
           pattern: "Have you checked ~?",
           patternKo: "확인 여부 묻기",
           alt: "잃어버린 물건을 찾는 상황",
-          opener: {
-            text: "I can't find my wallet.",
-            ko: "내 지갑을 못 찾겠어."
-          },
+          opener: { text: "I can't find my wallet.", ko: "내 지갑을 못 찾겠어." },
           turns: [
             {
               role: "me",
               ko: "가방 확인해 봤어?",
               prefix: "Have you",
               suffix: "?",
+              orderGloss: "너는 확인했니(Have you checked) + 너의(your) + 가방을(bag)",
               variants: [
-                {
-                  words: ["checked", "your", "bag"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Have you checked your bag? 은 '가방 확인해 봤어?'라는 자연스러운 표현이에요."
-                },
-                {
-                  words: ["looked", "in", "your", "bag"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "Have you looked in your bag? 도 가능해요. 가방 안을 봤는지 묻는 느낌입니다."
-                }
+                { words: ["checked", "your", "bag"], quality: "best", note: "Have you checked your bag? = '가방 확인해 봤어?'." },
+                { words: ["looked", "in", "your", "bag"], quality: "possible", note: "Have you looked in your bag? 도 가능해요. '가방 안을 봤어?'." }
               ],
               fillers: ["check", "saw", "bag", "in"],
-              hint: "Have you 뒤에는 checked/looked 같은 과거분사가 와요.",
+              hint: "Have you 뒤에는 보통 checked/looked. check라고 해도 뜻은 통해요.",
               pronunciation: "[해브 유 체크트 유어 백?]",
-              tip: "check는 확인하다, look in은 안을 들여다보다.",
-              trapFeedback: {
-                check: {
-                  title: "check가 아니라 checked예요.",
-                  body: "Have you 다음에는 동사원형 check가 아니라 과거분사 checked가 와요.",
-                  exampleWrong: "Have you check your bag? ❌",
-                  exampleCorrect: "Have you checked your bag? ✅"
-                },
-                saw: {
-                  title: "saw는 여기서 어색해요.",
-                  body: "가방을 확인해 봤는지 묻는 상황이므로 checked your bag이 자연스러워요.",
-                  exampleCorrect: "Have you checked your bag? ✅"
-                }
-              }
+              tip: "check = 확인하다, look in = 안을 들여다보다.",
+              trapFeedback: {}
             },
             {
               role: "other",
               ko: "응, 확인했어.",
               prefix: "Yes,",
               suffix: ".",
+              orderGloss: "응(Yes) + 나는 확인했어(I've checked) + 그것을(it)",
               variants: [
-                {
-                  words: ["I've", "checked", "it"],
-                  label: "추천 정답",
-                  quality: "best",
-                  note: "Yes, I've checked it. 은 '응, 확인했어'라는 자연스러운 대답이에요."
-                },
-                {
-                  words: ["I", "have", "checked", "it"],
-                  label: "가능한 정답",
-                  quality: "possible",
-                  note: "I have checked it도 맞아요. I've는 I have의 줄임말입니다."
-                }
+                { words: ["I've", "checked", "it"], quality: "best", note: "Yes, I've checked it. = '응, 확인했어'." },
+                { words: ["I", "have", "checked", "it"], quality: "possible", note: "I have checked it도 맞아요. I've는 I have의 줄임말이에요." }
               ],
               fillers: ["I", "did", "check", "bag"],
-              hint: "Yes 뒤에 I've checked it. 또는 I have checked it. 을 쓸 수 있어요.",
+              alsoOk: [
+                { words: ["I", "checked", "it"], note: "I checked it. 도 통해요! 현재완료로는 I've checked it. 이 더 자연스러워요." }
+              ],
+              hint: "Yes 뒤에 I've checked it. 또는 I have checked it.",
               pronunciation: "[예스, 아이브 체크트 잇]",
-              tip: "I've = I have. 현재완료 문장에서 자주 쓰는 줄임말이에요.",
-              trapFeedback: {
-                did: {
-                  title: "여기서는 did보다 have가 자연스러워요.",
-                  body: "질문이 Have you로 시작했기 때문에 Yes, I've checked it. 이 자연스러워요.",
-                  exampleCorrect: "Yes, I've checked it. ✅"
-                },
-                check: {
-                  title: "check가 아니라 checked예요.",
-                  body: "I've 뒤에는 과거분사 checked가 와야 합니다.",
-                  exampleWrong: "I've check it. ❌",
-                  exampleCorrect: "I've checked it. ✅"
-                }
-              }
+              tip: "I've = I have. 현재완료에서 자주 쓰는 줄임말이에요.",
+              trapFeedback: {}
             }
           ]
         }
@@ -2479,6 +1821,9 @@
 
       const DOM = {
         startScreen: $("startScreen"),
+        loadingScreen: $("loadingScreen"),
+        loadingTitle: $("loadingTitle"),
+        loadingSub: $("loadingSub"),
         quizScreen: $("quizScreen"),
         resultScreen: $("resultScreen"),
         learnerNameInput: $("learnerNameInput"),
@@ -2516,7 +1861,6 @@
 
         selectedArea: $("selectedArea"),
         wordBank: $("wordBank"),
-        undoBtn: $("undoBtn"),
         clearBtn: $("clearBtn"),
         hintBtn: $("hintBtn"),
         checkBtn: $("checkBtn"),
@@ -2536,11 +1880,124 @@
         statFirstTry: $("statFirstTry"),
         statBestCombo: $("statBestCombo"),
         wrongReview: $("wrongReview"),
+        reviewBtn: $("reviewBtn"),
         retrySameBtn: $("retrySameBtn"),
         homeBtn: $("homeBtn")
       };
 
       let tokenSeq = 0;
+
+      /* ===== 효과음 (브라우저 내장 - 외부 파일 불필요) ===== */
+      let audioCtx = null;
+
+      function getAudioCtx() {
+        if (!audioCtx) {
+          const Ctx = window.AudioContext || window.webkitAudioContext;
+          if (!Ctx) return null;
+          audioCtx = new Ctx();
+        }
+        if (audioCtx.state === "suspended") audioCtx.resume();
+        return audioCtx;
+      }
+
+      function playBeep(ctx, freq, startAt, duration, type = "sine", peak = 0.18) {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, startAt);
+        gain.gain.setValueAtTime(0.0001, startAt);
+        gain.gain.exponentialRampToValueAtTime(peak, startAt + 0.012);
+        gain.gain.exponentialRampToValueAtTime(0.0001, startAt + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(startAt);
+        osc.stop(startAt + duration + 0.02);
+      }
+
+      function playCorrectSound() {
+        const ctx = getAudioCtx();
+        if (!ctx) return;
+        const t = ctx.currentTime;
+        // 밝게 올라가는 3음 (도-미-솔)
+        playBeep(ctx, 523.25, t, 0.12, "triangle", 0.16);
+        playBeep(ctx, 659.25, t + 0.1, 0.12, "triangle", 0.16);
+        playBeep(ctx, 783.99, t + 0.2, 0.2, "triangle", 0.18);
+      }
+
+      function playWrongSound() {
+        const ctx = getAudioCtx();
+        if (!ctx) return;
+        const t = ctx.currentTime;
+        // 짧게 내려가는 부드러운 2음
+        playBeep(ctx, 311.13, t, 0.16, "sine", 0.16);
+        playBeep(ctx, 207.65, t + 0.12, 0.24, "sine", 0.16);
+      }
+
+      /* ===== 음성(TTS) ===== */
+      let speechTimer = null;
+
+      function stopSpeech() {
+        if (speechTimer) {
+          clearTimeout(speechTimer);
+          speechTimer = null;
+        }
+        if ("speechSynthesis" in window) {
+          window.speechSynthesis.cancel();
+        }
+      }
+
+      function speakText(text, lang = "en-US", options = {}) {
+        if (!text || !("speechSynthesis" in window)) return;
+        const { rate = 0.9, pitch = 1, cancel = true } = options;
+        if (cancel) stopSpeech();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        utterance.rate = rate;
+        utterance.pitch = pitch;
+        window.speechSynthesis.speak(utterance);
+      }
+
+      function speakSequence(items) {
+        if (!("speechSynthesis" in window)) return;
+        stopSpeech();
+        let index = 0;
+        const playNext = () => {
+          if (index >= items.length) return;
+          const item = items[index];
+          index += 1;
+          const utterance = new SpeechSynthesisUtterance(item.text);
+          utterance.lang = item.lang || "en-US";
+          utterance.rate = item.rate || 0.9;
+          utterance.pitch = item.pitch || 1;
+          utterance.onend = () => {
+            speechTimer = window.setTimeout(playNext, 260);
+          };
+          window.speechSynthesis.speak(utterance);
+        };
+        playNext();
+      }
+
+      function getPromptAudioText(turn) {
+        if (turn.audioPrompt) return turn.audioPrompt;
+        if (turn.prefix && turn.prefix.trim()) return `${turn.prefix.trim()} ...`;
+        return "";
+      }
+
+      function schedulePromptAudio() {
+        if (!("speechSynthesis" in window)) return;
+        const situation = currentSituation();
+        const turn = currentTurn();
+        const items = [];
+        // Step 1에서는 상대방 첫 대사를 먼저 읽어줌.
+        if (state.turnIndex === 0 && situation.opener?.text) {
+          items.push({ text: situation.opener.text, lang: "en-US", rate: 0.9 });
+        }
+        // 문제로 풀 문장은 정답을 읽지 않고 앞부분(prefix)만 읽음.
+        const prompt = getPromptAudioText(turn);
+        if (prompt) items.push({ text: prompt, lang: "en-US", rate: 0.86 });
+        if (!items.length) return;
+        speechTimer = window.setTimeout(() => speakSequence(items), 420);
+      }
 
       function createInitialState() {
         return {
@@ -2560,6 +2017,7 @@
           firstTryCorrect: 0,
           combo: 0,
           bestCombo: 0,
+          reviewMode: false,
           wrongItems: [],
           wrongSeen: new Set()
         };
@@ -2591,6 +2049,18 @@
         return normalizeWords([word]);
       }
 
+      /* 너그러운 비교용 키:
+         관사(a/an/the) 제거 + 동사 형태를 원형으로 통일.
+         -> watched/watch, went/go, 관사 유무 등을 같은 답으로 인정. */
+      function contentKey(words) {
+        return words
+          .map((w) => wordKey(w))
+          .filter((k) => k && !ARTICLES.has(k))
+          .map((k) => LEMMA[k] || k)
+          .join(" ")
+          .trim();
+      }
+
       function shuffle(array) {
         const arr = [...array];
         for (let i = arr.length - 1; i > 0; i -= 1) {
@@ -2605,7 +2075,6 @@
         if (turn.prefix && turn.prefix.trim()) parts.push(turn.prefix.trim());
         if (words && words.length) parts.push(words.join(" "));
         if (turn.suffix && turn.suffix.trim()) parts.push(turn.suffix.trim());
-
         return parts
           .join(" ")
           .replace(/\s+([?.!,])/g, "$1")
@@ -2620,6 +2089,7 @@
 
       function showScreen(name) {
         DOM.startScreen.classList.toggle("hidden", name !== "start");
+        DOM.loadingScreen.classList.toggle("hidden", name !== "loading");
         DOM.quizScreen.classList.toggle("hidden", name !== "quiz");
         DOM.resultScreen.classList.toggle("hidden", name !== "result");
       }
@@ -2634,7 +2104,11 @@
       }
 
       function completedTurns() {
-        return state.situationIndex * 2 + state.turnIndex;
+        let count = 0;
+        for (let i = 0; i < state.situationIndex; i += 1) {
+          count += state.queue[i].turns.length;
+        }
+        return count + state.turnIndex;
       }
 
       function buildWordBank(turn) {
@@ -2642,27 +2116,51 @@
         const display = new Map();
         const orderedKeys = [];
 
+        function rememberDisplayWord(word) {
+          const key = wordKey(word);
+          if (!display.has(key)) {
+            display.set(key, word);
+            orderedKeys.push(key);
+          }
+          return key;
+        }
+
+        // 1) 정답 후보들에서 필요한 단어 수 계산
         for (const variant of turn.variants) {
           const localCounts = new Map();
-
           for (const word of variant.words) {
-            const key = wordKey(word);
-
-            if (!display.has(key)) {
-              display.set(key, word);
-              orderedKeys.push(key);
-            }
-
+            const key = rememberDisplayWord(word);
             localCounts.set(key, (localCounts.get(key) || 0) + 1);
           }
-
           for (const [key, count] of localCounts.entries()) {
             maxCounts.set(key, Math.max(maxCounts.get(key) || 0, count));
           }
         }
 
-        const words = [];
+        // 1-b) alsoOk(통하는 대안 답)에 필요한 단어도 블록에 포함
+        for (const ok of turn.alsoOk || []) {
+          const localCounts = new Map();
+          for (const word of ok.words) {
+            const key = rememberDisplayWord(word);
+            localCounts.set(key, (localCounts.get(key) || 0) + 1);
+          }
+          for (const [key, count] of localCounts.entries()) {
+            maxCounts.set(key, Math.max(maxCounts.get(key) || 0, count));
+          }
+        }
 
+        // 2) 함정 단어는 이미 있는 단어면 중복 추가하지 않음
+        for (const filler of turn.fillers || []) {
+          const key = wordKey(filler);
+          if (maxCounts.has(key)) continue;
+          if (display.has(key)) continue;
+          display.set(key, filler);
+          orderedKeys.push(key);
+          maxCounts.set(key, 1);
+        }
+
+        // 3) 같은 단어가 진짜 여러 번 필요한 경우만 여러 개 생성
+        const words = [];
         for (const key of orderedKeys) {
           const count = maxCounts.get(key) || 0;
           for (let i = 0; i < count; i += 1) {
@@ -2670,15 +2168,22 @@
           }
         }
 
-        for (const filler of turn.fillers || []) {
-          words.push(filler);
-        }
-
         return shuffle(words).map((text) => ({
           id: `tok-${tokenSeq++}`,
           text,
           used: false
         }));
+      }
+
+      function showShuffleLoading(chapterKey) {
+        const name = readLearnerName();
+        DOM.startNameCircle.textContent = name;
+        DOM.loadingTitle.textContent = "지금 섞고 있습니다";
+        DOM.loadingSub.textContent = `${CHAPTER_LABELS[chapterKey]} 문장을 랜덤으로 섞는 중이에요.`;
+        showScreen("loading");
+        speakText("지금 문장을 섞고 있어요.", "ko-KR", { rate: 1.03, cancel: true });
+        const delay = 1200 + Math.floor(Math.random() * 500);
+        window.setTimeout(() => startChapter(chapterKey), delay);
       }
 
       function startChapter(chapterKey) {
@@ -2697,24 +2202,51 @@
         loadCurrentTurn();
       }
 
+      function showReviewLoading() {
+        const items = state.wrongItems.slice();
+        if (!items.length) return;
+        const learner = state.learnerName;
+        const chapterKey = state.chapterKey;
+        DOM.loadingTitle.textContent = "복습 문제 준비 중";
+        DOM.loadingSub.textContent = `틀린 문제 ${items.length}개를 모으고 있어요.`;
+        showScreen("loading");
+        speakText("틀린 문제를 다시 풀어볼게요.", "ko-KR", { rate: 1.03, cancel: true });
+        const delay = 1000 + Math.floor(Math.random() * 400);
+        window.setTimeout(() => startReview(items, learner, chapterKey), delay);
+      }
+
+      function startReview(items, learner, chapterKey) {
+        // 틀린 문제만 한 문제(1턴)씩 담은 새 코스를 만든다.
+        const queue = shuffle(items).map((item) => ({
+          ...item.situationRef,
+          turns: [item.turnRef]
+        }));
+
+        state = createInitialState();
+        state.learnerName = learner;
+        state.chapterKey = chapterKey;
+        state.reviewMode = true;
+        state.queue = queue;
+        state.totalTurns = queue.reduce((sum, item) => sum + item.turns.length, 0);
+
+        showScreen("quiz");
+        loadCurrentTurn();
+      }
+
       function loadCurrentTurn() {
         const turn = currentTurn();
-
         state.selected = [];
         state.bank = buildWordBank(turn);
         state.attempts = 0;
         state.answered = false;
 
-        /*
-          중요:
-          새 문제/새 스텝으로 넘어올 때마다 한국어 뜻을 기본 표시합니다.
-          클릭하면 숨길 수 있고, 다음 문제에서는 다시 표시됩니다.
-        */
+        // 새 문제마다 한국어 뜻 기본 표시(누르면 숨김).
         state.showMeaning = true;
         state.showHint = false;
 
         hideFeedback();
         renderQuiz();
+        schedulePromptAudio();
       }
 
       function renderQuiz() {
@@ -2758,7 +2290,6 @@
 
       function renderHeader() {
         DOM.comboPill.classList.toggle("combo-hot", state.combo >= 2);
-
         if (state.combo >= 2) {
           DOM.comboPill.textContent = `🔥 ${state.combo} Combo`;
         } else {
@@ -2775,17 +2306,42 @@
 
       function renderMeaning() {
         const turn = currentTurn();
-
         DOM.meaningText.textContent = turn.ko;
         DOM.meaningCard.classList.toggle("collapsed", !state.showMeaning);
         DOM.meaningText.classList.toggle("hidden", !state.showMeaning);
         DOM.meaningAction.textContent = state.showMeaning ? "숨기기" : "보기";
       }
 
+      /* 어순 힌트: 영어 어순대로 '한국어 뜻만' 보여줌.
+         데이터에는 "너는 봤니(Have you seen) + 이 영화를(this movie)" 처럼
+         영어를 함께 적어두지만, 화면에는 괄호 속 영어를 빼고
+         "너는 봤니 + 이 영화를" 만 보여줘서 그대로 베끼는 걸 막습니다. */
+      function orderGlossKo(turn) {
+        const raw = turn.orderGloss || `${turn.ko}`;
+        return raw
+          .replace(/\s*\([^)]*\)/g, "")
+          .replace(/\s{2,}/g, " ")
+          .trim();
+      }
+
       function renderHint() {
         const turn = currentTurn();
+        const gloss = orderGlossKo(turn);
+        const tip = turn.hint || "";
 
-        DOM.hintBox.textContent = turn.hint || "";
+        DOM.hintBox.innerHTML = `
+          <div>
+            <strong>어순 힌트</strong><br>
+            <span class="gloss-line">${escapeHtml(gloss)}</span>
+          </div>
+          ${tip ? `
+            <div style="margin-top:8px;">
+              <strong>도움말</strong><br>
+              ${escapeHtml(tip)}
+            </div>
+          ` : ""}
+        `;
+
         DOM.hintBox.classList.toggle("hidden", !state.showHint);
         DOM.hintBtn.textContent = state.showHint ? "힌트 닫기" : "힌트";
       }
@@ -2800,7 +2356,6 @@
       function renderSentence() {
         const turn = currentTurn();
         const selectedText = state.selected.map((item) => item.text).join(" ");
-
         DOM.currentSentence.innerHTML = `
           ${turn.prefix ? `<span>${escapeHtml(turn.prefix)}</span>` : ""}
           <span class="blank-slot ${selectedText ? "filled" : ""}">
@@ -2815,7 +2370,6 @@
           DOM.selectedArea.innerHTML = `<span class="blank-chip">____</span>`;
           return;
         }
-
         DOM.selectedArea.innerHTML = state.selected
           .map((item) => `
             <button class="selected-token" type="button" data-id="${escapeHtml(item.id)}">
@@ -2823,7 +2377,6 @@
             </button>
           `)
           .join("");
-
         DOM.selectedArea.querySelectorAll(".selected-token").forEach((button) => {
           button.addEventListener("click", () => removeSelectedToken(button.dataset.id));
         });
@@ -2831,7 +2384,6 @@
 
       function renderWordBank() {
         const available = state.bank.filter((token) => !token.used);
-
         DOM.wordBank.innerHTML = available
           .map((token) => `
             <button class="word-token" type="button" data-id="${escapeHtml(token.id)}">
@@ -2839,7 +2391,6 @@
             </button>
           `)
           .join("");
-
         DOM.wordBank.querySelectorAll(".word-token").forEach((button) => {
           button.addEventListener("click", () => chooseToken(button.dataset.id));
         });
@@ -2847,10 +2398,8 @@
 
       function chooseToken(id) {
         if (state.answered || !DOM.feedbackPanel.classList.contains("hidden")) return;
-
         const token = state.bank.find((item) => item.id === id);
         if (!token || token.used) return;
-
         token.used = true;
         state.selected.push({ id: token.id, text: token.text });
         renderDynamicParts();
@@ -2858,41 +2407,74 @@
 
       function removeSelectedToken(id) {
         if (state.answered || !DOM.feedbackPanel.classList.contains("hidden")) return;
-
         const index = state.selected.findIndex((item) => item.id === id);
         if (index < 0) return;
-
         const [removed] = state.selected.splice(index, 1);
         const token = state.bank.find((item) => item.id === removed.id);
         if (token) token.used = false;
-
-        renderDynamicParts();
-      }
-
-      function undoToken() {
-        if (state.answered || state.selected.length === 0) return;
-
-        const removed = state.selected.pop();
-        const token = state.bank.find((item) => item.id === removed.id);
-        if (token) token.used = false;
-
         renderDynamicParts();
       }
 
       function clearTokens() {
         if (state.answered) return;
-
         state.selected = [];
-        state.bank.forEach((token) => {
-          token.used = false;
-        });
-
+        state.bank.forEach((token) => { token.used = false; });
         renderDynamicParts();
       }
 
-      function findMatchingVariant(turn, selectedWords) {
-        const answer = normalizeWords(selectedWords);
-        return turn.variants.find((variant) => normalizeWords(variant.words) === answer) || null;
+      /* ===== 채점: 너그럽게 =====
+         1) 정답 후보와 정확히 일치  -> best / possible
+         2) 관사·동사형태만 다르고 뜻 통함 -> works (정답 처리, 더 자연스러운 형태 안내)
+         3) alsoOk(통하는 대안)에 일치 -> works
+         4) 그 외 -> 오답(다시) */
+      function evaluateAnswer(turn, selectedWords) {
+        const selNorm = normalizeWords(selectedWords);
+
+        // 1) 정확히 일치
+        for (const variant of turn.variants) {
+          if (normalizeWords(variant.words) === selNorm) {
+            return {
+              status: "correct",
+              quality: variant.quality,
+              sentence: composeSentence(turn, variant.words),
+              note: variant.note,
+              lenient: false
+            };
+          }
+        }
+
+        // 2) 관사·동사형태 무시하고 뜻이 통하면 인정
+        const selKey = contentKey(selectedWords);
+        if (selKey) {
+          for (const variant of turn.variants) {
+            if (contentKey(variant.words) === selKey) {
+              return {
+                status: "correct",
+                quality: "works",
+                sentence: composeSentence(turn, variant.words),
+                note: "단어 모양은 조금 다르지만 뜻은 충분히 통해요! 더 자연스러운 형태도 같이 봐두면 좋아요.",
+                lenient: true
+              };
+            }
+          }
+        }
+
+        // 3) alsoOk: 통하는 대안 답
+        for (const ok of turn.alsoOk || []) {
+          if (normalizeWords(ok.words) === selNorm) {
+            const natural = turn.variants[0];
+            return {
+              status: "correct",
+              quality: "works",
+              sentence: composeSentence(turn, natural.words),
+              note: ok.note || "이렇게 말해도 뜻은 통해요!",
+              lenient: true
+            };
+          }
+        }
+
+        // 4) 오답
+        return { status: "wrong", feedback: getWrongFeedback(turn, selectedWords) };
       }
 
       function getWrongFeedback(turn, selectedWords) {
@@ -2901,17 +2483,15 @@
 
         for (const key of Object.keys(trapFeedback)) {
           const normalizedKey = normalizeWords([key]);
-
           if (chosen === normalizedKey || chosen.includes(normalizedKey)) {
             return trapFeedback[key];
           }
         }
 
         const best = turn.variants[0];
-
         return {
-          title: "조금 아쉬워요.",
-          body: "단어의 뜻뿐 아니라 문장 안에서 어떤 형태로 쓰이는지도 확인해보세요. 힌트를 누르면 어순 도움을 볼 수 있어요.",
+          title: "조금만 바꿔볼까요?",
+          body: "뜻이 살짝 다르게 전달돼요. 어순 힌트를 누르면 단어를 어떤 순서로 놓는지 볼 수 있어요.",
           exampleWrong: `${composeSentence(turn, selectedWords)} ❌`,
           exampleCorrect: `${composeSentence(turn, best.words)} ✅`
         };
@@ -2922,40 +2502,36 @@
 
         const turn = currentTurn();
         const selectedWords = state.selected.map((item) => item.text);
-        const match = findMatchingVariant(turn, selectedWords);
+        const result = evaluateAnswer(turn, selectedWords);
 
-        if (match) {
+        if (result.status === "correct") {
           state.answered = true;
           state.correctCount += 1;
-
-          if (state.attempts === 0) {
-            state.firstTryCorrect += 1;
-          }
-
+          if (state.attempts === 0) state.firstTryCorrect += 1;
           state.combo += 1;
           state.bestCombo = Math.max(state.bestCombo, state.combo);
 
+          playCorrectSound();
           renderHeader();
           pulseCombo();
-          showCorrectFeedback(match);
+          showCorrectFeedback(result, selectedWords);
         } else {
+          // 한 번 틀리면 그대로 다음 문제로 넘어감 (재시도 없음).
           state.attempts += 1;
           state.combo = 0;
-
-          const feedback = getWrongFeedback(turn, selectedWords);
-          addWrongItem(turn, selectedWords, feedback);
-
+          state.answered = true;
+          addWrongItem(turn, selectedWords, result.feedback);
+          playWrongSound();
           renderHeader();
-          showWrongFeedback(feedback, selectedWords);
+          renderDynamicParts();
+          showWrongFeedback(result.feedback, selectedWords);
         }
       }
 
       function addWrongItem(turn, selectedWords, feedback) {
         const situation = currentSituation();
         const key = `${situation.id}-${state.turnIndex}`;
-
         if (state.wrongSeen.has(key)) return;
-
         state.wrongSeen.add(key);
         state.wrongItems.push({
           key,
@@ -2963,22 +2539,44 @@
           ko: turn.ko,
           selected: selectedWords.join(" "),
           correct: composeSentence(turn, turn.variants[0].words),
-          feedbackTitle: feedback.title
+          feedbackTitle: feedback.title,
+          situationRef: situation,
+          turnRef: turn
         });
       }
 
-      function showCorrectFeedback(match) {
+      function showCorrectFeedback(result, selectedWords) {
         const turn = currentTurn();
-        const completed = composeSentence(turn, match.words);
+        const naturalSentence = result.sentence;
+        const chosenSentence = composeSentence(turn, selectedWords);
+        const isWorks = result.quality === "works";
 
-        DOM.feedbackPanel.className = "feedback-panel correct";
-        DOM.feedbackKicker.textContent = match.quality === "best" ? "정답" : "가능한 정답";
-        DOM.feedbackTitle.textContent = match.quality === "best" ? "좋아! 자연스러워요" : "맞아요! 이것도 가능해요";
-        DOM.feedbackBody.textContent = match.note || "";
-        DOM.feedbackExample.innerHTML = `
-          <strong>완성 문장</strong><br>
-          ${escapeHtml(completed)}
-        `;
+        if (isWorks) {
+          DOM.feedbackPanel.className = "feedback-panel works";
+          DOM.feedbackKicker.textContent = "통했어요";
+          DOM.feedbackTitle.textContent = "좋아요! 충분히 통해요 👍";
+        } else {
+          DOM.feedbackPanel.className = "feedback-panel correct";
+          DOM.feedbackKicker.textContent = result.quality === "best" ? "정답" : "정답";
+          DOM.feedbackTitle.textContent = result.quality === "best" ? "완벽해요! 👏" : "좋아요! 이것도 자연스러워요";
+        }
+
+        DOM.feedbackBody.textContent = result.note || "";
+
+        if (isWorks && chosenSentence !== naturalSentence) {
+          DOM.feedbackExample.innerHTML = `
+            <strong>내가 만든 문장</strong><br>
+            ${escapeHtml(chosenSentence)}<br><br>
+            <strong>더 자연스럽게는</strong><br>
+            ${escapeHtml(naturalSentence)}
+          `;
+        } else {
+          DOM.feedbackExample.innerHTML = `
+            <strong>완성 문장</strong><br>
+            ${escapeHtml(naturalSentence)}
+          `;
+        }
+
         DOM.feedbackTip.innerHTML = `
           <strong>발음</strong> ${escapeHtml(turn.pronunciation || "")}<br>
           <strong>코칭</strong> ${escapeHtml(turn.tip || "")}
@@ -2986,6 +2584,12 @@
 
         DOM.retryBtn.classList.add("hidden");
         DOM.nextBtn.classList.remove("hidden");
+
+        // 정답 효과음이 먼저 울리고, 그다음 자연스러운 완성 문장을 읽어줌.
+        stopSpeech();
+        speechTimer = window.setTimeout(() => {
+          speakText(naturalSentence, "en-US", { rate: 0.86, cancel: false });
+        }, 460);
       }
 
       function showWrongFeedback(feedback, selectedWords) {
@@ -2994,20 +2598,21 @@
         const fallbackCorrect = composeSentence(turn, turn.variants[0].words);
 
         DOM.feedbackPanel.className = "feedback-panel wrong";
-        DOM.feedbackKicker.textContent = "다시!";
-        DOM.feedbackTitle.textContent = feedback.title || "조금 아쉬워요.";
-        DOM.feedbackBody.textContent = feedback.body || "";
+        DOM.feedbackKicker.textContent = "아쉬워요";
+        DOM.feedbackTitle.textContent = feedback.title || "이렇게 말하면 돼요";
+        DOM.feedbackBody.textContent = feedback.body || "정답을 보고 다음 문제로 넘어가요. 마지막에 틀린 문제만 다시 복습할 수 있어요.";
         DOM.feedbackExample.innerHTML = `
           <strong>비교</strong><br>
           ${escapeHtml(feedback.exampleWrong || `${fallbackWrong} ❌`)}<br>
           ${escapeHtml(feedback.exampleCorrect || `${fallbackCorrect} ✅`)}
         `;
         DOM.feedbackTip.innerHTML = `
-          <strong>힌트</strong> ${escapeHtml(turn.hint || "단어 순서를 다시 확인해보세요.")}
+          <strong>어순 힌트</strong> ${escapeHtml(orderGlossKo(turn))}
         `;
 
-        DOM.retryBtn.classList.remove("hidden");
-        DOM.nextBtn.classList.add("hidden");
+        // 한 번 틀리면 재시도 없이 다음으로.
+        DOM.retryBtn.classList.add("hidden");
+        DOM.nextBtn.classList.remove("hidden");
       }
 
       function hideFeedback() {
@@ -3021,43 +2626,42 @@
 
       function goNextTurn() {
         if (!state.answered) return;
-
         const situation = currentSituation();
-
         if (state.turnIndex < situation.turns.length - 1) {
           state.turnIndex += 1;
           loadCurrentTurn();
           return;
         }
-
         state.situationIndex += 1;
         state.turnIndex = 0;
-
         if (state.situationIndex >= state.queue.length) {
           showResult();
           return;
         }
-
         loadCurrentTurn();
       }
 
       function showResult() {
+        stopSpeech();
         const accuracy = state.totalTurns
           ? Math.round((state.firstTryCorrect / state.totalTurns) * 100)
           : 0;
 
-        DOM.resultSummary.textContent =
-          `${CHAPTER_LABELS[state.chapterKey]} 연습을 마쳤어요. 정확도는 첫 시도 기준입니다.`;
+        DOM.resultSummary.textContent = state.reviewMode
+          ? `복습을 마쳤어요. 정확도는 첫 시도 기준입니다.`
+          : `${CHAPTER_LABELS[state.chapterKey]} 연습을 마쳤어요. 정확도는 첫 시도 기준입니다.`;
 
         DOM.statCompleted.textContent = `${state.correctCount}/${state.totalTurns}`;
         DOM.statAccuracy.textContent = `${accuracy}%`;
         DOM.statFirstTry.textContent = `${state.firstTryCorrect}`;
         DOM.statBestCombo.textContent = `${state.bestCombo}`;
 
-        if (state.wrongItems.length === 0) {
+        const hasWrong = state.wrongItems.length > 0;
+
+        if (!hasWrong) {
           DOM.wrongReview.innerHTML = `
             <div class="wrong-item">
-              틀린 문장 없이 깔끔하게 완료했어요. 아주 좋아요!
+              다시 풀 문장 없이 깔끔하게 완료했어요. 아주 좋아요!
             </div>
           `;
         } else {
@@ -3067,12 +2671,18 @@
               <div class="wrong-item">
                 <strong>${item.lessonNo}과 · ${escapeHtml(item.ko)}</strong><br>
                 내 선택: ${escapeHtml(item.selected || "____")}<br>
-                정답: ${escapeHtml(item.correct)}<br>
+                추천 문장: ${escapeHtml(item.correct)}<br>
                 포인트: ${escapeHtml(item.feedbackTitle)}
               </div>
             `).join("")}
           `;
         }
+
+        // 틀린 문제가 있을 때만 복습 버튼을 보여줌.
+        DOM.reviewBtn.classList.toggle("hidden", !hasWrong);
+        DOM.reviewBtn.textContent = state.reviewMode ? "남은 문제 다시 복습하기" : "틀린 문제 복습하기";
+        // 복습 모드에서는 '같은 코스 다시 하기'를 숨겨 흐름을 단순하게 유지.
+        DOM.retrySameBtn.classList.toggle("hidden", state.reviewMode);
 
         showScreen("result");
       }
@@ -3089,7 +2699,7 @@
       // Events
       document.querySelectorAll(".chapter-start").forEach((button) => {
         button.addEventListener("click", () => {
-          startChapter(button.dataset.chapter);
+          showShuffleLoading(button.dataset.chapter);
         });
       });
 
@@ -3098,6 +2708,7 @@
       });
 
       DOM.quitBtn.addEventListener("click", () => {
+        stopSpeech();
         hideFeedback();
         showScreen("start");
       });
@@ -3112,17 +2723,21 @@
         renderHint();
       });
 
-      DOM.undoBtn.addEventListener("click", undoToken);
       DOM.clearBtn.addEventListener("click", clearTokens);
       DOM.checkBtn.addEventListener("click", checkAnswer);
       DOM.retryBtn.addEventListener("click", retryCurrentTurn);
       DOM.nextBtn.addEventListener("click", goNextTurn);
 
+      DOM.reviewBtn.addEventListener("click", () => {
+        showReviewLoading();
+      });
+
       DOM.retrySameBtn.addEventListener("click", () => {
-        startChapter(state.chapterKey);
+        showShuffleLoading(state.chapterKey);
       });
 
       DOM.homeBtn.addEventListener("click", () => {
+        stopSpeech();
         showScreen("start");
       });
 
